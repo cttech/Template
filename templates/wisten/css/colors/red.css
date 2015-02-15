@@ -1,0 +1,38 @@
+/* ==============================================
+Red Color Skin
+=============================================== */
+span.red,.nav-menu a:hover,.nav-menu a.active,.main-nav li.active a,
+.revslide span,.subs .text h1 span,.mail-message p.mail-head,
+.newsletter-message p.mail-head,.post-texts .tags:hover,.sidebar ul li a:hover{color:#e70000;}
+.nav-tabs li.active a,.nav-tabs li.active a:hover{border-top:2px solid #e70000;}
+#dm_tabs_1 ul.dm_menu_1 li.dm_menu_item_1 a.dm_selected{
+border-top: 2px solid #e70000!important;
+}
+.owl-item .item:hover{border-bottom:4px solid #e70000 ;}
+.owl-item .item .images a img:hover{border:2px solid #e70000;}
+.work-img .button:hover,.subscribe-btn:hover,.form-btn:hover,
+.post-img .zoom-button:hover,.pagination li.active a{background:#e70000;	}
+.form:focus{border:1px solid #e70000;}
+
+
+/************/
+.main ul li span,.accordion .accordion-head span{color:#f02d2d;}
+.packages .active .circle,.flex-control-paging li a:hover ,
+.flex-control-paging li a.flex-active{background:#f02d2d;}
+
+.packages .active .circle:after{border:7px solid #f02d2d;}
+a.p-btn:hover{background:#f02d2d; border:1px solid #f02d2d;}
+
+
+	.btn-post:hover,.comments-link:hover ,.readmore-link:hover{
+	/* Gradient Background */
+		background: rgb(224,36,36); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: -moz-linear-gradient(top,  rgb(224,36,36) 0%, rgb(190,25,25) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(224,36,36)), color-stop(100%,rgb(190,25,25))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgb(224,36,36) 0%,rgb(190,25,25) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgb(224,36,36) 0%,rgb(190,25,25) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgb(224,36,36) 0%,rgb(190,25,25) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgb(224,36,36) 0%,rgb(190,25,25) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e02424', endColorstr='#be1919',GradientType=0 ); /* IE6-8 */
+	}

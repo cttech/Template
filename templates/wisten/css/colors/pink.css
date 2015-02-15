@@ -1,0 +1,24 @@
+/* ==============================================
+Pink Color Skin
+=============================================== */
+span.red,.nav-menu a:hover,.nav-menu a.active,.main-nav li.active a,
+.revslide span,.subs .text h1 span,.mail-message p.mail-head,
+.newsletter-message p.mail-head,.post-texts .tags:hover,.sidebar ul li a:hover{color:#ec005f;}
+.nav-tabs li.active a,.nav-tabs li.active a:hover{border-top:2px solid #ec005f;}
+#dm_tabs_1 ul.dm_menu_1 li.dm_menu_item_1 a.dm_selected{
+border-top: 2px solid #ec005f!important;
+}
+.owl-item .item:hover{border-bottom:4px solid #ec005f ;}
+.owl-item .item .images a img:hover{border:2px solid #ec005f;}
+.work-img .button:hover,.subscribe-btn:hover,.form-btn:hover,
+.post-img .zoom-button:hover,.pagination li.active a{background:#ec005f;	}
+.form:focus{border:1px solid #ec005f;}
+
+
+/************/
+.main ul li span,.accordion .accordion-head span{color:#ec005f;}
+.packages .active .circle,.flex-control-paging li a:hover ,
+.flex-control-paging li a.flex-active,.btn-post:hover,.comments-link:hover ,.readmore-link:hover{background:#ec005f;}
+
+.packages .active .circle:after{border:7px solid #ec005f;}
+a.p-btn:hover{background:#ec005f; border:1px solid #ec005f;}

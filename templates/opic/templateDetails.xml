@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>OPIC</name>
+	<version>1.0</version>
+	<creationDate>06/08/2014</creationDate>
+	<author>Ashiq Ahmed</author>
+	<authorEmail>contact@cttechbd.com</authorEmail>
+	<copyright>Copyright (C) 2015 Creative Thinkers. All rights reserved.</copyright>
+	<description>TPL_OPIC_DESCRIPTION</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>fonts</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>api</folder>
+	</files>
+	<positions>
+		
+		<position>mainnav</position>
+		<position>slider</position>
+		<position>service</position>
+		<position>team_content</position>
+		<position>portfolio_content</position>
+		<position>fact_content</position>
+		<position>price_content</position>
+		<position>subscribe_content</position>
+		<position>blog</position>
+		<position>team_upper</position>
+		<position>contactform_upper</position>
+		<position>contactform</position>
+		<position>contact_details</position>
+		<position>footer_social</position>
+	
+		
+		
+		<position>footer_client</position>
+		<position>position-8</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_opic.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_opic.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="templateColor" class="" type="list" default="blue"
+					label="TPL_PROTOSTAR_COLOR_LABEL"
+					description="TPL_PROTOSTAR_COLOR_DESC"> 
+					<option value="blue">Blue</option>
+					<option value="blue-2">Blue 2</option>
+					<option value="beige">Beige</option>
+					<option value="black">Black</option>
+					<option value="pink">Pink</option>
+					<option value="pink-2">Pink 2</option>
+					<option value="green">Green</option>
+					<option value="green-2">Green 2</option>
+					<option value="midnight">Midnight</option>
+					<option value="purple">Purple</option>
+					<option value="red">Red</option>
+					<option value="red-2">Red 2</option>
+					<option value="red-3">Red 3</option>
+					<option value="orange">Orange</option>
+					<option value="yellow">Yellow</option>
+				</field>
+
+				<field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
+					label="TPL_PROTOSTAR_BACKGROUND_COLOR_LABEL"
+					description="TPL_PROTOSTAR_BACKGROUND_COLOR_DESC" />
+
+				<field name="logoFile" class="" type="media" default=""
+					label="TPL_PROTOSTAR_LOGO_LABEL"
+					description="TPL_PROTOSTAR_LOGO_DESC" />
+					
+				<field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+			
+			</fieldset>
+			<fieldset name="loader" label="Loader Option">
+				<field name="loderimg" class="" type="media" default=""	label="Loder Image"	description="Input Site Loader Image" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

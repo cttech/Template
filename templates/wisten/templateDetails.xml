@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>wisten</name>
+	<version>1.0</version>
+	<creationDate>06/08/2014</creationDate>
+	<author>Mehir Mondal</author>
+	<authorEmail>webpentagon@pranon.com</authorEmail>
+	<copyright>Copyright (C) 2014 Web Pentagon. All rights reserved.</copyright>
+	<description>TPL_WISTEN_XML_DESCRIPTION</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>fonts</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>less</folder>
+	</files>
+	<positions>
+		<position>topbar</position>
+		<position>mainnav</position>
+		<position>slider_top</position>
+		<position>slider</position>
+		<position>slider_bottom</position>
+		<position>about_content</position>
+		<position>about_bottom</position>
+		<position>features_content</position>
+		<position>testimonial_content</position>
+		<position>tab_content</position>
+		<position>progress_content</position>
+		<position>timeline_content</position>
+		<position>team_content</position>
+		<position>accordion_content</position>
+		<position>portfolio_content</position>
+		<position>portfolio_fullwidth_content</position>
+		<position>service_content</position>
+		<position>service_bottom</position>
+		<position>video_content</position>
+		<position>price_content</position>
+		<position>subscribe_content</position>
+		<position>contactform_content</position>
+		<position>blog_title</position>
+		<position>footer_1</position>
+		<position>footer_2</position>
+		<position>footer_3</position>
+	
+		
+		
+		<position>position-7</position>
+		<position>position-8</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_wisten.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_wisten.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="templateColor" class="" type="list" default="blue"
+					label="TPL_PROTOSTAR_COLOR_LABEL"
+					description="TPL_PROTOSTAR_COLOR_DESC"> 
+					<option value="blue">Blue</option>
+					<option value="blue-2">Blue 2</option>
+					<option value="beige">Beige</option>
+					<option value="black">Black</option>
+					<option value="pink">Pink</option>
+					<option value="pink-2">Pink 2</option>
+					<option value="green">Green</option>
+					<option value="green-2">Green 2</option>
+					<option value="midnight">Midnight</option>
+					<option value="purple">Purple</option>
+					<option value="red">Red</option>
+					<option value="red-2">Red 2</option>
+					<option value="red-3">Red 3</option>
+					<option value="orange">Orange</option>
+					<option value="yellow">Yellow</option>
+				</field>
+
+				<field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
+					label="TPL_PROTOSTAR_BACKGROUND_COLOR_LABEL"
+					description="TPL_PROTOSTAR_BACKGROUND_COLOR_DESC" />
+
+				<field name="logoFile" class="" type="media" default=""
+					label="TPL_PROTOSTAR_LOGO_LABEL"
+					description="TPL_PROTOSTAR_LOGO_DESC" />
+					
+				<field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+			
+			</fieldset>
+			<fieldset name="loader" label="Loader Option">
+				<field name="loderimg" class="" type="media" default=""	label="Loder Image"	description="Input Site Loader Image" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
