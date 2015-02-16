@@ -12,7 +12,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 $count = count($items);
 ?>
 
-<?php if( $ajaxRequest ){ ?>
+<?php if( $ajaxRequest ){/* ?>
 	<?php if( $count>0 ){ ?>
 
 		<?php foreach($items as $index=>$item){ ?>
@@ -60,7 +60,7 @@ $count = count($items);
 		<?php } //end foreach ?>
 	<?php } ?>
 	<?php jexit(); ?>
-<?php } ?>
+<?php */} ?>
 <!--/Ajax Load-->
 
 <div id="sp-portfolio-module-<?php echo $uniqid; ?>" class="sp-portfolio default">
