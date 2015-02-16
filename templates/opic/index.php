@@ -29,21 +29,14 @@ $sitename = $app->get('sitename');
 
 // <!-- Javascrit Core
 // 		================================================== -->        
-//         <script src="js/jquery-1.11.1.min.js"></script>
-// 		<script src="js/bootstrap.min.js"></script>
-// 		<script src="js/jquery.easing.1.3.js"></script>		
-// 		<script src="js/jquery.isotope.min.js"></script>
-//         <script src="js/jquery.flexisel.js"></script>
-//         <script src="js/jquery.appear.js"></script>
-//         <script src="js/jquery.lightbox.min.js"></script>
-//         <script src="js/jquery.custom.js"></script>   
+
 // 		<!-- Color -->
 // 		<script type="text/javascript" src="js/color-panel.js"></script>	
 
 
 // Add JavaScript Frameworks
 //JHtml::_('bootstrap.framework');
-//$doc->addScript('templates/' . $this->template . '/js/template.js');
+
 $doc->addScript('templates/' . $this->template . '/js/jquery-1.11.1.min.js');
 $doc->addScript('templates/' . $this->template . '/js/bootstrap.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.easing.1.3.js');
@@ -53,14 +46,7 @@ $doc->addScript('templates/' . $this->template . '/js/jquery.appear.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.lightbox.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.custom.js');
 $doc->addScript('templates/' . $this->template . '/js/color-panel.js');
-// $doc->addScript('templates/' . $this->template . '/js/jquery.superslides.js');
-// $doc->addScript('templates/' . $this->template . '/js/jquery.flexslider.js');
-// $doc->addScript('templates/' . $this->template . '/js/jquery.sticky.js');
-// $doc->addScript('templates/' . $this->template . '/js/owl.carousel.js');
-// $doc->addScript('templates/' . $this->template . '/js/jquery.isotope.js');
-// $doc->addScript('templates/' . $this->template . '/js/jquery.mb.YTPlayer.js');
-// $doc->addScript('templates/' . $this->template . '/js/jquery.fitvids.js');
-//$doc->addScript('templates/' . $this->template . '/js/plugins.js');
+
 
 // Add Stylesheets
 
@@ -504,6 +490,6 @@ else
 			</div>
 		</section> --><!-- End Color Switcher --> 
 
-			
+				<jdoc:include type="modules" name="debug" style="none" />
 	</body>
 </html>

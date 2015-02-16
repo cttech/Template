@@ -1,17 +1,17 @@
 /* --------------------------------------------
  READY FUNCTION
 -------------------------------------------- */
-$(document).ready(function() {
+jQuery(document).ready(function() {
 	/* --------------------------------------------
 	 SCROLL NAVIGATION
 	-------------------------------------------- */	
-	$(function() {
+	jQuery(function() {
 		"use strict";
-		$('.scroll').bind('click', function(event) {
-			var $anchor = $(this);
-			var headerH = $('#navigation').outerHeight();
-				$('html, body').stop().animate({					
-					scrollTop : $($anchor.attr('href')).offset().top - 60 + "px"
+		jQuery('.scroll').bind('click', function(event) {
+			var anchor = jQuery(this);
+			var headerH = jQuery('#navigation').outerHeight();
+				jQuery('html, body').stop().animate({					
+					scrollTop : jQuery(anchor.attr('href')).offset().top - 60 + "px"
 				}, 1200, 'easeInOutExpo');
 			event.preventDefault();
 		});
@@ -20,9 +20,9 @@ $(document).ready(function() {
 	/* --------------------------------------------
 	 ACTIVE NAVIGATION
 	-------------------------------------------- */
-	$(function() {
+	jQuery(function() {
 		"use strict";
-		$('body').scrollspy({ 
+		jQuery('body').scrollspy({ 
 			target: '#top',
 			offset: 95
 		});
@@ -31,20 +31,20 @@ $(document).ready(function() {
 	/* --------------------------------------------
 	 CLOSE COLLAPSE MENU ON MOBILE VIEW
 	-------------------------------------------- */
-	$(function() {
+	jQuery(function() {
 		"use strict";
-		$('.nav li a').click(function () {
-			 $('.navbar-collapse').removeClass('in');
+		jQuery('.nav li a').click(function () {
+			 jQuery('.navbar-collapse').removeClass('in');
 		});
 	});
 		
 	/* --------------------------------------------
 	 ANIMATED PAGE ON REVEALED
 	-------------------------------------------- */
-	$(function($) {
+	jQuery(function(jQuery) {
 		"use strict";
-		$('.animated').appear(function() {
-			var elem = $(this);
+		jQuery('.animated').appear(function() {
+			var elem = jQuery(this);
 			var animation = elem.data('animation');
 			if ( !elem.hasClass('visible') ) {
 				var animationDelay = elem.data('animation-delay');
@@ -64,24 +64,24 @@ $(document).ready(function() {
 	/* --------------------------------------------
 	 LOAD MORE 
 	-------------------------------------------- */
-	$(function() {
+	jQuery(function() {
 		"use strict";
-		var loadtext = $('.load-more');
-		$(".load-posts").click(function() {
-			if($(this).hasClass('disable')) return false;				
-			$(this).html('<i class="fa fa-spin fa-spinner"></i> Loading');					
-			var $hidden = loadtext.filter(':hidden:first').delay(600);  			
-			if (!$hidden.next('.load-more').length) {
-				$hidden.fadeIn(500);
-				$(this).addClass('disable');
-				$(this).fadeTo("slow", 0.23).queue(function(n) {
-				 	$(this).html('All Posts Loaded');
+		var loadtext = jQuery('.load-more');
+		jQuery(".load-posts").click(function() {
+			if(jQuery(this).hasClass('disable')) return false;				
+			jQuery(this).html('<i class="fa fa-spin fa-spinner"></i> Loading');					
+			var hidden = loadtext.filter(':hidden:first').delay(600);  			
+			if (!hidden.next('.load-more').length) {
+				hidden.fadeIn(500);
+				jQuery(this).addClass('disable');
+				jQuery(this).fadeTo("slow", 0.23).queue(function(n) {
+				 	jQuery(this).html('All Posts Loaded');
 				 	n();
 				}).fadeTo("slow", 1);					
 			} else {
-				$hidden.fadeIn(500);
-				$(this).fadeTo("slow", 0.23).queue(function(g) {
-					$(this).html('Load More Post <i class="flaticon-arrow209">');
+				hidden.fadeIn(500);
+				jQuery(this).fadeTo("slow", 0.23).queue(function(g) {
+					jQuery(this).html('Load More Post <i class="flaticon-arrow209">');
 					g();
 				}).fadeTo("slow", 1);			
 			}
@@ -91,10 +91,10 @@ $(document).ready(function() {
 	/* -------------------------------------------- 
 	 BLOG FLEX SLIDER
 	-------------------------------------------- */
-	$(function() {
+	jQuery(function() {
 		"use strict";
-		$(".flexslider1").each(function() {
-			$('.flexslider1').flexslider({
+		jQuery(".flexslider1").each(function() {
+			jQuery('.flexslider1').flexslider({
 				animation: 'fade',
 				slideshow: false,
 				animationLoop: false,
@@ -106,21 +106,21 @@ $(document).ready(function() {
 	/* --------------------------------------------
 	 ANIMATED SKILL BARS
 	-------------------------------------------- */
-	$(function() {		
-		$('.progress-bar').appear(function(){
-			datavl = $(this).attr('data-percentage'),
-			$(this).animate({ "width" : datavl + "%"}, '200');
+	jQuery(function() {		
+		jQuery('.progress-bar').appear(function(){
+			datavl = jQuery(this).attr('data-percentage'),
+			jQuery(this).animate({ "width" : datavl + "%"}, '200');
 		});
 	});
 	
 	/* --------------------------------------------
 	 COUNT FACTORS
 	-------------------------------------------- */  
-	$(function() {
-		$(".fact-number").appear(function(){
-			$(this).each(function(){
-			dataperc = $(this).attr('data-perc'),
-				$(this).find('.factor').delay(6000).countTo({
+	jQuery(function() {
+		jQuery(".fact-number").appear(function(){
+			jQuery(this).each(function(){
+			dataperc = jQuery(this).attr('data-perc'),
+				jQuery(this).find('.factor').delay(6000).countTo({
 					from: 10,
 					to: dataperc,
 					speed: 3000,
@@ -133,10 +133,10 @@ $(document).ready(function() {
 	/* --------------------------------------------
 	 VIDEO SCRIPT
 	-------------------------------------------- */
-	$(function() {
+	jQuery(function() {
 		"use strict";
-		if ( $( ".player" ).length ) {
-			$(".player").mb_YTPlayer();
+		if ( jQuery( ".player" ).length ) {
+			jQuery(".player").mb_YTPlayer();
 		}
 	});		
 });
@@ -147,25 +147,25 @@ $(document).ready(function() {
 /* --------------------------------------------
  LOAD FUNCTION
 -------------------------------------------- */
-$(window).load(function() {
+jQuery(window).load(function() {
 
 	/* --------------------------------------------
 	 PAGE LOADER
 	-------------------------------------------- */	
-	$(function() {
+	jQuery(function() {
 		"use strict";
-		$(".loader-item").delay(700).fadeOut();
-		$("#pageloader").delay(800).fadeOut("slow");
+		jQuery(".loader-item").delay(700).fadeOut();
+		jQuery("#pageloader").delay(800).fadeOut("slow");
 	});
 	
 	/* --------------------------------------------
 	 ISOTOPE ANIMATION
 	-------------------------------------------- */
-	$(function(){
+	jQuery(function(){
 		"use strict";
-		if ( $( ".portfolio-container" ).length ) {
-			var $container = $('.portfolio-container');
-			$container.isotope({
+		if ( jQuery( ".portfolio-container" ).length ) {
+			var container = jQuery('.portfolio-container');
+			container.isotope({
 				filter: '*',
 				animationOptions: {
 					duration: 750,
@@ -174,12 +174,12 @@ $(window).load(function() {
 				}
 			});
 		}		
-		$('.portfolio-filter a').click(function(){
-			$('.portfolio-filter .current').removeClass('current');
-			$(this).addClass('current');
+		jQuery('.portfolio-filter a').click(function(){
+			jQuery('.portfolio-filter .current').removeClass('current');
+			jQuery(this).addClass('current');
 	
-			var selector = $(this).attr('data-filter');
-			$container.isotope({
+			var selector = jQuery(this).attr('data-filter');
+			container.isotope({
 				filter: selector,
 				animationOptions: {
 					duration: 750,
@@ -194,10 +194,10 @@ $(window).load(function() {
 	/* --------------------------------------------
 	 CLIENT 
 	-------------------------------------------- */
-	$(function() {
+	jQuery(function() {
 		"use strict";
-		if ( $( "#flexiselDemo" ).length ) {
-			$("#flexiselDemo").flexisel({
+		if ( jQuery( "#flexiselDemo" ).length ) {
+			jQuery("#flexiselDemo").flexisel({
 				visibleItems: 5,
 				animationSpeed: 1000,
 				autoPlay: true,
@@ -226,32 +226,32 @@ $(window).load(function() {
  	 CONTACT FORM
 	-------------------------------------------- */
 	var messageDelay = 2000;
-	$(init);
+	jQuery(init);
 	
 	function init() {
-	  $('#contactForm').show().submit( submitForm ).addClass( 'positioned' );  
+	  jQuery('#contactForm').show().submit( submitForm ).addClass( 'positioned' );  
 	}
 	
 	// Submit the form via Ajax
 	function submitForm() {
-	  var contactForm = $(this);
+	  var contactForm = jQuery(this);
 	
 	  // Are all the fields filled in?
 	
-	  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() ) {
+	  if ( !jQuery('#senderName').val() || !jQuery('#senderEmail').val() || !jQuery('#message').val() ) {
 	
 		// No; display a warning message and return to the form
-		$('#incompleteMessage').fadeIn().delay(messageDelay).fadeOut();
+		jQuery('#incompleteMessage').fadeIn().delay(messageDelay).fadeOut();
 		contactForm.fadeOut().delay(messageDelay).fadeIn();
 	
 	  } else {
 	
 		// Yes; submit the form to the PHP script via Ajax
 	
-		$('#sendingMessage').fadeIn();
+		jQuery('#sendingMessage').fadeIn();
 		contactForm.show();
 	
-		$.ajax( {
+		jQuery.ajax( {
 		  url: contactForm.attr( 'action' ) + "?ajax=true",
 		  type: contactForm.attr( 'method' ),
 		  data: contactForm.serialize(),
@@ -266,8 +266,8 @@ $(window).load(function() {
 	
 	// Handle the Ajax response
 	function submitFinished( response ) {
-	  response = $.trim( response );
-	  $('#sendingMessage').fadeOut();
+	  response = jQuery.trim( response );
+	  jQuery('#sendingMessage').fadeOut();
 	
 	  if ( response == "success" ) {
 	
@@ -276,19 +276,19 @@ $(window).load(function() {
 		// 2. Clear the form fields
 		// 3. Fade the content back in
 	
-		$('#successMessage').fadeIn().delay(messageDelay).fadeOut();
-		$('#senderName').val( "" );
-		$('#senderEmail').val( "" );
-		$('#message').val( "" );
+		jQuery('#successMessage').fadeIn().delay(messageDelay).fadeOut();
+		jQuery('#senderName').val( "" );
+		jQuery('#senderEmail').val( "" );
+		jQuery('#message').val( "" );
 	
-		$('#content').delay(messageDelay+500).fadeTo( 'slow', 1 );
+		jQuery('#content').delay(messageDelay+500).fadeTo( 'slow', 1 );
 	
 	  } else {
 	
 		// Form submission failed: Display the failure message,
 		// then redisplay the form
-		$('#failureMessage').fadeIn().delay(messageDelay).fadeOut();
-		$('#contactForm').delay(messageDelay+500).fadeIn();
+		jQuery('#failureMessage').fadeIn().delay(messageDelay).fadeOut();
+		jQuery('#contactForm').delay(messageDelay+500).fadeIn();
 	  }
 	}
 
@@ -296,19 +296,19 @@ $(window).load(function() {
 /* --------------------------------------------
  LOAD FUNCTION ENDS
 -------------------------------------------- */
-(function ($) {
+(function () {
 	"use strict";
-	$.fn.countTo = function (options) {
+	jQuery.fn.countTo = function (options) {
 		options = options || {};
 
-		return $(this).each(function () {
+		return jQuery(this).each(function () {
 			// set options for current element
-			var settings = $.extend({}, $.fn.countTo.defaults, {
-				from:            $(this).data('from'),
-				to:              $(this).data('to'),
-				speed:           $(this).data('speed'),
-				refreshInterval: $(this).data('refresh-interval'),
-				decimals:        $(this).data('decimals')
+			var settings = jQuery.extend({}, jQuery.fn.countTo.defaults, {
+				from:            jQuery(this).data('from'),
+				to:              jQuery(this).data('to'),
+				speed:           jQuery(this).data('speed'),
+				refreshInterval: jQuery(this).data('refresh-interval'),
+				decimals:        jQuery(this).data('decimals')
 			}, options);
 
 			// how many times to update the value, and how much to increment the value on each update
@@ -317,12 +317,12 @@ $(window).load(function() {
 
 			// references & variables that will change with each update
 			var self = this,
-				$self = $(this),
+				jQueryself = jQuery(this),
 				loopCount = 0,
 				value = settings.from,
-				data = $self.data('countTo') || {};
+				data = jQueryself.data('countTo') || {};
 
-			$self.data('countTo', data);
+			jQueryself.data('countTo', data);
 
 			// if an existing interval can be found, clear it first
 			if (data.interval) {
@@ -345,7 +345,7 @@ $(window).load(function() {
 
 				if (loopCount >= loops) {
 					// remove the interval
-					$self.removeData('countTo');
+					jQueryself.removeData('countTo');
 					clearInterval(data.interval);
 					value = settings.to;
 
@@ -357,12 +357,12 @@ $(window).load(function() {
 
 			function render(value) {
 				var formattedValue = settings.formatter.call(self, value, settings);
-				$self.text(formattedValue);
+				jQueryself.text(formattedValue);
 			}
 		});
 	};
 
-	$.fn.countTo.defaults = {
+	jQuery.fn.countTo.defaults = {
 		from: 0,               // the number the element should start at
 		to: 0,                 // the number the element should end at
 		speed: 1000,           // how long it should take to count between the target numbers
