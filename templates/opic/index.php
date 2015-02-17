@@ -56,6 +56,7 @@ $doc->addScript('templates/' . $this->template . '/js/color-panel.js');
 $doc->addStyleSheet('templates/' . $this->template . '/css/reset.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/animate.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.css');
+$doc->addStyleSheet('templates/' . $this->template . '/css/isotope.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/style.css');
 $doc->addStyleSheet('templates/' . $this->template . '/fonts/font-awesome/css/font-awesome.min.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/flaticon.css');
@@ -222,7 +223,7 @@ else
 			<div class="container">
 			WORKS MOdule
 				<div class="row">							  
-					<jdoc:include type="modules" name="portfolio_content" style="xhtml" />
+					<jdoc:include type="modules" name="portfolio_content" style="none" />
 				</div>
 					
 				<!-- Portfolio Filter Begins -->

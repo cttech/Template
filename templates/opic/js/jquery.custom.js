@@ -161,7 +161,7 @@ jQuery(window).load(function() {
 	/* --------------------------------------------
 	 ISOTOPE ANIMATION
 	-------------------------------------------- */
-	jQuery(function(){
+	/*jQuery(function(){
 		"use strict";
 		if ( jQuery( ".portfolio-container" ).length ) {
 			var container = jQuery('.portfolio-container');
@@ -189,7 +189,7 @@ jQuery(window).load(function() {
 			});
 		   return false;
 		});
-	});
+	});*/
 	
 	/* --------------------------------------------
 	 CLIENT 
