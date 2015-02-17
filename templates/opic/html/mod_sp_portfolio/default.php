@@ -32,7 +32,7 @@ $count = count($items);
 	<?php if($count>0) { ?>
 	<div class="portfolio-container animated" data-animation="fadeIn" data-animation-delay="700">
 		<?php foreach($items as $index=>$item){ ?>
-		<div class="opic-portfolio-item col-<?php echo $column . ' ' . modSPPortfolioJHelper::slug($item->tag); ?> visible">					
+		<div class="opic-portfolio-item <?php echo modSPPortfolioJHelper::slug($item->tag); ?> visible">					
 			<div class="portfolio-item">
 				<!-- Image -->															
 				<!-- <img src="images/portfolio/thumb/1.jpg" alt="image" class="img-responsive"> -->
@@ -44,7 +44,7 @@ $count = count($items);
 					<div class="portfolio-item-text">
 						<?php if($show_title){ ?>
 								<?php if($linked_title){ ?>
-									<h1 class="item-title"><a href="<?php echo $item->link; ?>"><?php echo $item->title; ?></a></h0>
+									<h1 class="item-title"><a href="<?php echo $item->link; ?>"><?php echo $item->title; ?></a></h1>
 								<?php }else { ?>
 									<h1 class="item-title"><?php echo $item->title; ?></h1>
 								<?php } ?>
@@ -59,52 +59,6 @@ $count = count($items);
 	</div>	
 		<?php }?>
 	</div>
-		<ul class="sp-portfolio-items">
-			<?php foreach($items as $index=>$item){ ?>
-				<li class="sp-portfolio-item col-<?php echo $column . ' ' . modSPPortfolioJHelper::slug($item->tag); ?> visible">
-					<div class="sp-portfolio-item-inner">
-
-						<div class="sp-portfolio-thumb">
-							<img src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>" />
-							<div class="sp-portfolio-overlay">
-								<div>
-									<a class="sp-portfolio-preview" rel="lightbox" title="<?php echo $item->title; ?>" href="<?php echo $item->image_full; ?>"><?php echo JText::_('PREVIEW'); ?></a>
-									<?php if($show_readmore){ ?>
-										<a class="sp-portfolio-link" href="<?php echo $item->link; ?>"><?php echo JText::_('MORE_DETAILS'); ?></a>
-									<?php } ?>
-								</div>
-							</div>
-						</div>
-
-						<div class="sp-portfolio-item-details">
-							<?php if($show_title){ ?>
-								<?php if($linked_title){ ?>
-									<h4 class="item-title"><a href="<?php echo $item->link; ?>"><?php echo $item->title; ?></a></h4>
-								<?php }else { ?>
-									<h4 class="item-title"><?php echo $item->title; ?></h4>
-								<?php } ?>
-							<?php } ?>
-
-							<?php if(($item->urls->urla!='') && ($show_url)){ ?>
-								<a href="<?php echo $item->urls->urla; ?>"><?php echo $item->urls->urlatext; ?></a>
-							<?php } ?>
-
-							<?php if($show_category){ ?>
-								<small class="category-name"><?php echo $item->tag; ?></small>
-							<?php } ?>		
-
-							<?php if($show_introtext){ ?>
-								<div class="sp-portfolio-introtext">
-									<?php echo $item->introtext; ?>
-								</div>
-							<?php } ?>
-						</div><!--/.sp-portfolio-item-details-->
-						<div style="clear:both"></div>	
-					</div><!--/.sp-portfolio-item-inner-->
-				</li>
-			<?php } ?>
-		</ul><!--/.sp-portfolio-items-->
-
 		<?php if(($ajax_loader && $show_filter) && ($count!=$total)) { ?>
 			<div class="sp-portfolio-loadmore">
 				<a href="#" class="btn btn-primary btn-large">
