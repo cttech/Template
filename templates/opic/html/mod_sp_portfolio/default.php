@@ -34,8 +34,9 @@ $count = count($items);
 		<?php foreach($items as $index=>$item){ ?>
 		<div class="opic-portfolio-item <?php echo modSPPortfolioJHelper::slug($item->tag); ?> visible">					
 			<div class="portfolio-item">
+				<?php //print_r($item);?>
 				<!-- Image -->															
-				<!-- <img src="images/portfolio/thumb/1.jpg" alt="image" class="img-responsive"> -->
+				<!-- <img src="images/portfolio/thumb/1.jpg" alt="image" class="img-responsive"/> -->
 				<img src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>" class="img-responsive"/>
 				
 			   	<!-- Item Caption -->
@@ -52,7 +53,8 @@ $count = count($items);
 							<?php if($show_category){ ?>
 								<p><?php echo $item->tag; ?></p>
 							<?php } ?>
-						<a class="sp-portfolio-preview" rel="lightbox" title="<?php echo $item->title; ?>" href="<?php echo $item->image_full; ?>"><i class="fa fa-external-link fa-2x"></i></a>
+						<!-- <a class="sp-portfolio-preview" rel="lightbox" title="<?php //echo $item->title; ?>" href="<?php //echo $item->image_full; ?>"><i class="fa fa-external-link fa-2x"></i></a> -->
+						<a class="sp-portfolio-preview" data-rel="prettyPhoto[gallery]" title="<?php echo $item->title; ?>" href="<?php echo $item->image_full; ?>"><i class="fa fa-external-link fa-2x"></i></a>
 					</div>
 				</div>
 			</div>						

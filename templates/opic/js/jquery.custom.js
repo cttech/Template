@@ -87,6 +87,16 @@ jQuery(document).ready(function() {
 			}
 		});
 	});
+
+	/* ==============================================
+	Pretty Photo
+	=============================================== */
+
+	jQuery(document).ready(function(){
+	    jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
+	        theme: "light_square",
+	    });
+  });
 		
 	/* -------------------------------------------- 
 	 BLOG FLEX SLIDER

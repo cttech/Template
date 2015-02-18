@@ -43,6 +43,7 @@ $doc->addScript('templates/' . $this->template . '/js/jquery.easing.1.3.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.isotope.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.flexisel.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.appear.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.prettyPhoto.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.lightbox.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.custom.js');
 $doc->addScript('templates/' . $this->template . '/js/color-panel.js');
@@ -221,7 +222,6 @@ else
 		================================================== -->
 		<section id="projects" class="bg-blue">	  
 			<div class="container">
-			WORKS MOdule
 				<div class="row">							  
 					<jdoc:include type="modules" name="portfolio_content" style="none" />
 				</div>
