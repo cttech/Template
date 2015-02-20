@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>MOD_CT_PRICE</name>
+	<creationDate>15/02/2015</creationDate>
+	<author>Creative Thinkers</author>
+	<authorEmail>contact@cttechbd.com</authorEmail>
+	<authorUrl>http://www.cttechbd.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>0.1</version>
+	<description>MOD_CT_PRICETABLE_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_ct_pricetable">mod_ct_pricetable.php</filename>
+		<filename>mod_ct_pricetable.xml</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+		<config>
+		<fields name="params" addfieldpath="/modules/mod_pr_pricetable/elements">
+		<fieldset name="basic">
+				 <field name="moduleclass_sfx" type="text" default="" label="MODULE_CLASS_SUFFIX" description="MODULE_CLASS_SUFFIX_DESCRIPTION"/>
+		</fieldset>
+	
+		
+		<!-- column 1 backend input -->
+		<fieldset name="header" label="Header Description">
+		        <field name="title" type="text" label="Title" description=""/>
+		        <field name="sub_title" type="text" label="Sub Title" description=""/>
+		        <field name="desc" type="text" label="Description" description="" />
+		</fieldset>
+		<fieldset name="column_1" label="DETAIL_COLUMN_1">
+				<field name="header_text1" type="text" label="Header Text" description="" />
+				<field name="header_bottom_text1" type="text" label="Header Text" description="" />
+				<field name="Circle_text1" type="text" label="Period" description="" />
+				<field name="price_int_1" type="text" label="Price Integer" description="" />
+				<field name="col_1_row_1_text" type="text" label="ROW_1_TEXT" description="" />
+				<field name="col_1_row_2_text" type="text" label="ROW_2_TEXT" description="" />
+				<field name="col_1_row_3_text" type="text" label="ROW_3_TEXT" description="" />
+				<field name="col_1_row_4_text" type="text" label="ROW_4_TEXT" description="" />
+				<field name="col_1_row_5_text" type="text" label="ROW_5_TEXT" description="" />
+				<field name="col_1_row_6_text" type="text" label="ROW_6_TEXT" description="" />
+				<field name="col_1_row_7_text" type="text" label="BUTTON_TEXT" description="" />
+				<field name="col_1_row_8_text" type="url" label="BUTTON_LINK" description="" default="#" />
+		</fieldset>
+
+<!-- column 2 backend input -->
+		<fieldset name="column_2" label="DETAIL_COLUMN_2">
+				<field name="header_text2" type="text" label="HEADER_TEXT" description="" />
+				<field name="header_bottom_text2" type="text" label="HEADER_BOTTOM_TEXT" description="" />
+				<field name="Circle_text2" type="text" label="CIRCLE_TEXT" description="" />
+				<field name="price_int_2" type="text" label="PRICE" description="" />
+				<field name="col_2_row_1_text" type="text" label="ROW_1_TEXT" description="" />
+				<field name="col_2_row_2_text" type="text" label="ROW_2_TEXT" description="" />
+				<field name="col_2_row_3_text" type="text" label="ROW_3_TEXT" description="" />
+				<field name="col_2_row_4_text" type="text" label="ROW_4_TEXT" description="" />
+				<field name="col_2_row_5_text" type="text" label="ROW_5_TEXT" description="" />
+				<field name="col_2_row_6_text" type="text" label="ROW_6_TEXT" description="" />
+				<field name="col_2_row_7_text" type="text" label="BUTTON_TEXT" description="" />
+				<field name="col_2_row_8_text" type="url" label="BUTTON_LINK" description="" default="#" />
+		</fieldset>
+
+<!-- column 3 backend input -->
+		<fieldset name="column_3" label="DETAIL_COLUMN_3">
+				<field name="header_text3" type="text" label="HEADER_TEXT" description="" />
+				<field name="header_bottom_text3" type="text" label="HEADER_BOTTOM_TEXT" description="" />
+				<field name="Circle_text3" type="text" label="CIRCLE_TEXT" description="" />
+				<field name="price_int_3" type="text" label="PRICE" description="" />
+				<field name="col_3_row_1_text" type="text" label="ROW_1_TEXT" description="" />
+				<field name="col_3_row_2_text" type="text" label="ROW_2_TEXT" description="" />
+				<field name="col_3_row_3_text" type="text" label="ROW_3_TEXT" description="" />
+				<field name="col_3_row_4_text" type="text" label="ROW_4_TEXT" description="" />
+				<field name="col_3_row_5_text" type="text" label="ROW_5_TEXT" description="" />
+				<field name="col_3_row_6_text" type="text" label="ROW_6_TEXT" description="" />
+				<field name="col_3_row_7_text" type="text" label="BUTTON_TEXT" description="" />
+				<field name="col_3_row_8_text" type="url" label="BUTTON_LINK" description="" default="#" />
+		</fieldset>
+
+<!-- <fieldset name="column_3" label="Detail column-3">
+				<field name="header_text3" type="text" label="Header Text" description="" />
+				<field name="price_int_3" type="text" label="Price Integer" description="" />
+				<field name="price_deci_3" type="text" label="Price Decimal" description="" />
+				<field name="period3" type="text" label="Period" description="" />
+				<field name="col_3_row_1_text" type="text" label="Row 1 Text" description="" />
+				<field name="col_3_row_1_text1" type="text" label="Row 1 Text2" description="" />
+				
+				<field name="col_3_row_2_text" type="text" label="Row 2 Text" description="" />
+				<field name="col_3_row_2_text1" type="text" label="Row 2 Text2" description="" />
+				
+				<field name="col_3_row_3_text" type="text" label="Row 3 Text" description="" />
+				<field name="col_3_row_3_text1" type="text" label="Row 3 Text2" description="" />
+				
+				<field name="col_3_row_4_text" type="text" label="Row 4 Text" description="" />
+				<field name="col_3_row_4_text1" type="text" label="Row 4 Text2" description="" />
+				
+				<field name="col_3_row_5_text" type="text" label="Row 5 Text" description="" />
+				<field name="col_3_row_5_text1" type="text" label="Row 5 Text2" description="" />
+				
+				<field name="col_3_row_6_text" type="text" label="Row 6 Text" description="" />
+				<field name="col_3_row_6_text1" type="text" label="Row 6 Text2" description="" />
+				
+				<field name="col_3_row_7_text" type="text" label="Button Text" description="" />
+				
+				<field name="col_3_row_8_text" type="url" label="Order Link" description="" default="#" />
+		</fieldset> -->
+			</fields>
+	</config>
+</extension>

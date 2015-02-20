@@ -223,7 +223,7 @@ else
 		<section id="projects" class="bg-blue">	  
 			<div class="container">
 				<div class="row">							  
-					<jdoc:include type="modules" name="portfolio_content" style="none" />
+					
 				</div>
 					
 				<!-- Portfolio Filter Begins -->
@@ -261,8 +261,8 @@ else
 		<section id="pricing">
 			<div class="container">
 				<div class="row">		  
-					OUR PRICE MODULE
-					  <jdoc:include type="modules" name="price_content" style="xhtml" />
+				
+					  <jdoc:include type="modules" name="price_content" style="none" />
 					<!-- end col-md-12 -->
 			  
 			  		<!-- Pricing Inner -->
@@ -307,23 +307,14 @@ else
 		================================================== -->
 		<section id="team">
   
-			<div class="container">
-				<div class="row">
-                TEAM UPPER MODULE
-                 <jdoc:include type="modules" name="team_upper" style="xhtml" />
-      
-					
-        
-				</div><!-- end row -->
-			</div><!-- end container -->
+			
    
 			<!-- team start -->    
-			 TEAM  MODULE
-			 <jdoc:include type="modules" name="team_content" style="xhtml" />
+		
+			 <jdoc:include type="modules" name="team_content" style="none" />
 		
 			<!-- team are end -->
-			<div class="clearfix"></div>
-    
+			
 		</section>  
   
 		<!-- Contact Us Area
@@ -358,10 +349,14 @@ else
 		</section>
         <!-- Component area  -->
 		
-		
-		<!-- Blog Area
+		<?php
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+if ($menu->getActive() != $menu->getDefault()) {?>
+	<!-- Blog Area
 		================================================== -->
-		<section id="blog" class="blog-rightsidebar">
+		
+		<section id="blog" class="blog-rightsidebar" style="">
 	  
 			<div class="container">
 				<div class="row">
@@ -375,7 +370,11 @@ else
 				</div><!-- end row -->
 			</div><!-- end container -->		  
 		</section>
+	
 		<!-- Component area End -->
+
+<?php } ?>
+		
 	  
 		<!-- Socials Area
 		================================================== -->
@@ -385,7 +384,7 @@ else
 				<div class="row">
 					<div class="col-md-12">
                     FOOTER SOCIAL MODULE
-				
+						<jdoc:include type="modules" name="footer_social" style="xhtml" />
 						
 				
 					</div><!-- end col-md-12 -->
