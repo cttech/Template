@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.1" method="upgrade">
+	<name>MOD_CT_SOCIAL</name>
+	<creationDate>15/02/2015</creationDate>
+	<author>Ashiq Ahmed</author>
+	<authorEmail>contact@cttechbd.com</authorEmail>
+	<authorUrl>http://www.cttechbd.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>1.0</version>
+	<description>MOD_CT_SOCIAL_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_ct_social">mod_ct_social.php</filename>
+		<filename>mod_ct_social.xml</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+		<config>
+		<fields name="params">
+			
+			<fieldset name="header" label="Header Description">
+				<field name="title" type="text" label="Title" description=""/>
+				<field name="sub_title" type="text" label="Sub Title" description=""/>
+		        <field name="desc" type="text" label="Description" description="" />
+			</fieldset>
+			
+			<fieldset name="social_links" label="SOCIAL_LINKS">
+				
+				<field name="facebook" type="url" default="" label="FACEBOOK_URL" description="Facebook Url"/>		
+				<field name="twitter" type="url" default="" label="TWITTER_URL" description="Twitter Url"/>		
+                <field name="googleplus" type="url" default="" label="GOGGLE_PLUS_URL" description="Googleplus Url"/>
+                <field name="linkedin" type="url" default="" label="LINKEDIN_URL" description="Linkedin Url"/>
+				<field name="vimeo" type="url" default="" label="VIMEO_URL" description="Vimeo Url"/>		
+				<field name="youtube" type="url" default="" label="YOUTUBE_URL" description="Youtube Url"/>		
+				<field name="pinterest" type="url" default="" label="PINTEREST_URL" description="pinterest  Url"/>			
+				
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>
