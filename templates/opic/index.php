@@ -41,11 +41,13 @@ $doc->addScript('templates/' . $this->template . '/js/jquery-1.11.1.min.js');
 $doc->addScript('templates/' . $this->template . '/js/bootstrap.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.easing.1.3.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.isotope.min.js');
+$doc->addScript('templates/' . $this->template . '/js/blog/jquery.flexslider-min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.flexisel.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.appear.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.lightbox.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.custom.js');
 $doc->addScript('templates/' . $this->template . '/js/color-panel.js');
+
 
 
 // Add Stylesheets
@@ -56,6 +58,7 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/reset.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/animate.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/isotope.css');
+$doc->addStyleSheet('templates/' . $this->template . '/css/blog/flexslider.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/style.css');
 $doc->addStyleSheet('templates/' . $this->template . '/fonts/font-awesome/css/font-awesome.min.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/flaticon.css');
@@ -188,10 +191,7 @@ else
 		<section id="services"> 		  
 			<div class="container">
 				<div class="row">
-				
-				<jdoc:include type="modules" name="service" style="xhtml" />
-					
-				
+					<jdoc:include type="modules" name="service" style="xhtml" />
 				</div><!-- end row -->			  
 			</div><!-- end container -->		  
 		</section><!-- end services -->
@@ -356,7 +356,7 @@ else
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-                    FOOTER SOCIAL MODULE
+                   
 						<jdoc:include type="modules" name="footer_social" style="xhtml" />
 						
 				
@@ -389,7 +389,9 @@ else
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12"> 
-                    	FOOTER        
+                    	<p class="text-center copyright">
+							Copyright <?php echo date('Y'); ?> <a href="<?php echo $this->baseurl; ?>"> <?php echo $sitename; ?></a> All rights reserved. Designed by <a href="#">myboodesign.com</a>
+						</p>        
 						        
 					</div>
 				</div>
