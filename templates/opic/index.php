@@ -52,7 +52,6 @@ $doc->addScript('templates/' . $this->template . '/js/color-panel.js');
 
 
 
-//$doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/reset.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/animate.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.css');
@@ -60,7 +59,6 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/isotope.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/style.css');
 $doc->addStyleSheet('templates/' . $this->template . '/fonts/font-awesome/css/font-awesome.min.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/flaticon.css');
-//$doc->addStyleSheet('templates/' . $this->template . '/css/owl.carousel.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/prettyPhoto.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/responsive.css');
 
@@ -201,12 +199,12 @@ else
   
 		<!-- Project Area
 		================================================== -->
-		<?php if ($this->countModules('service')) : ?>
+		<?php if ($this->countModules('portfolio_content')) : ?>
 		<section id="projects" class="bg-blue">	  
 			<div class="container">
 			
 				<div class="row">							  
-					
+				<jdoc:include type="modules" name="portfolio_content" style="xhtml" />	
 				</div>
 			
 			</div><!-- end container -->			
@@ -247,7 +245,7 @@ else
 	  
 			<div class="container">
 				<div class="row">
-		  BLOG MODULE
+	
 		  			 <jdoc:include type="modules" name="blog" style="xhtml" />
 						
 			
@@ -260,14 +258,13 @@ else
 		================================================== -->
 		<?php if ($this->countModules('newsletter')) : ?>
 		<section id="newsletter" class="bg-yellow">
-			<form name="newsletter" action="#" method="post" class="animated" data-animation="zoomIn" data-animation-delay="300">
-				<input type="text" placeholder="Enter your email address here to subscribe our update, and press Enter!">
-			</form>
+			 <jdoc:include type="modules" name="newsletter" style="xhtml" />
+			
 		</section>
   		<?php endif ?>
 		<!-- About Us And Team Area
 		================================================== -->
-		<?php if ($this->countModules('newsletter')) : ?>
+		<?php if ($this->countModules('team_content')) : ?>
 		<section id="team">
   			<jdoc:include type="modules" name="team_content" style="none" />	
 		</section>  
@@ -295,23 +292,59 @@ else
 	<!-- Blog Area
 		================================================== -->
 		
-		<section id="blog" class="blog-rightsidebar" style="">
-	  
-			<div class="container">
-				<div class="row">
-		  
-				COMPONENT AREA
-				<!-- Begin Content -->
+		<!-- <section  class="blog-rightsidebar" style=""> -->
+		<div class="container">
+			<div class="row">
+	  	<?php if ($this->countModules('left-sidebar')) { ?>
+			<!-- Left Part Sidebar -->
+					<div class="col-md-8 col-sm-8">
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+												                        
+					</div><!-- Right Part -->
+					
+					<div class="col-md-4 col-sm-4">
+						<div class="sidebar">
+							<jdoc:include type="modules" name="left-sidebar" style="xhtml" />			
+																				
+						</div><!-- Sidebar Ends -->
+					</div>
+
+
+		<?php } elseif ($this->countModules('right-sidebar')) { ?>
+
+					<div class="col-md-4 col-sm-4">
+						<!-- Sidebar Begins -->
+						<div class="sidebar">
+							<jdoc:include type="modules" name="right-sidebar" style="xhtml" />			
+																				
+						</div><!-- Sidebar Ends -->
+					</div>
+					
+					<!-- Right Part -->
+					<div class="col-md-8 col-sm-8">
+					
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+												                        
+					</div><!-- end col-md-4 -->
+
+		<?php } else  { ?>
+
+			
+				<div class="col-md-12 col-sm-12">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 					<!-- End Content -->
-			
-				</div><!-- end row -->
-			</div><!-- end container -->		  
-		</section>
+				</div>
+						  
+		
 	
 		<!-- Component area End -->
 
+<?php }?>
+</div><!-- end row -->
+</div><!-- end container -->
 <?php } ?>
 		
 	  
