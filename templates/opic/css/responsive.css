@@ -2,7 +2,7 @@
 /* ---------- MAX 1199PX ---------- */
 @media (max-width: 1199px) {
 	/* Portfolio */
-	.portfolio-container {
+	.portfolio-container, .portfolio-container-blog {
 		margin:0px !important;
 	}
 	/* Blog */
@@ -13,7 +13,7 @@
 /* ---------- MAX 1024PX ---------- */
 @media (max-width: 1024px) {
 	/* Portfolio */
-	.portfolio-container {
+	.portfolio-container, .portfolio-container-blog {
 		margin:0px 15% !important;
 	}
 	/* Blog Timeline */
@@ -23,7 +23,7 @@
 	.blog-timeline-event-right:before{
 		left:-30px;
 	}
-	#blog-outer .portfolio-container{
+	#blog-outer .portfolio-container, #blog-outer .portfolio-container-blog{
 		margin:0px!important;
 	}
 }
@@ -93,7 +93,7 @@
 		border:1px solid #f0f0f0;
 	}
 	/* Portfolio */
-	.portfolio-container {
+	.portfolio-container, .portfolio-container-blog {
 		margin: 0 40px !important;
 	}
 	/* Contact Info */
@@ -126,7 +126,7 @@
 		width:48% !important;
 		padding:0px 5px;
 	}
-	#blog-outer .portfolio-container{
+	#blog-outer .portfolio-container, #blog-outer .portfolio-container-blog{
 		margin:10px 0px !important;
 	}
 	/* Faq */
@@ -217,7 +217,7 @@
 		width:97% !important;
 		padding:0px;
 	}
-	#blog-outer .portfolio-container{
+	#blog-outer .portfolio-container, #blog-outer .portfolio-container-blog{
 		margin:10px 0px !important;
 	}
 	/* Shortcodes */
@@ -233,7 +233,7 @@
 		line-height:10px !important;
 	}
 	/* Portfolio */
-	.portfolio-container{
+	.portfolio-container, .portfolio-container-blog{
 		margin:0px 23% !important;
 	}
 	/* Blog Grid */
@@ -379,7 +379,7 @@
 		float: left;
 	}
 	/* Portfolio */
-	.portfolio-container{
+	.portfolio-container, .portfolio-container-blog{
 		margin:0px 15% !important;
 	}
 	.portfolio-container .portfolio-item{
@@ -395,7 +395,7 @@
 /* ---------- MAX 360px ---------- */
 @media (max-width: 360px) {	
 	/* Portfolio */
-	.portfolio-container{
+	.portfolio-container, .portfolio-container-blog{
 		margin:0px 15px !important;
 	}
 	.portfolio-filter a {
@@ -409,7 +409,7 @@
 /* ---------- MAX 320px ---------- */
 @media (max-width: 320px) {	
 	/* Portfolio */
-	.portfolio-container{
+	.portfolio-container, .portfolio-container-blog{
 		margin:0px !important;
 	}
 	.portfolio-container .portfolio-item{

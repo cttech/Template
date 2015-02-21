@@ -1405,7 +1405,7 @@ ul.logo-client li > a > img:hover {
     height: 255px;
     width: 100%;
 }
-#blog-outer .portfolio-container{
+#blog-outer .portfolio-container, #blog-outer .portfolio-container-blog{
 	margin:10px 0px;
 }
 /* Faq */

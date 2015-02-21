@@ -43,6 +43,7 @@ $doc->addScript('templates/' . $this->template . '/js/jquery.easing.1.3.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.isotope.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.flexisel.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.appear.js');
+$doc->addScript('templates/' . $this->template . '/js/blog/jquery.flexslider-min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.prettyPhoto.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.lightbox.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.custom.js');
@@ -58,6 +59,7 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/reset.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/animate.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/isotope.css');
+$doc->addStyleSheet('templates/' . $this->template . '/css/blog/flexslider.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/style.css');
 $doc->addStyleSheet('templates/' . $this->template . '/fonts/font-awesome/css/font-awesome.min.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/flaticon.css');
@@ -223,7 +225,7 @@ else
 		<section id="projects" class="bg-blue">	  
 			<div class="container">
 				<div class="row">							  
-					
+					 <jdoc:include type="modules" name="portfolio_content" style="xhtml" />
 				</div>
 					
 				<!-- Portfolio Filter Begins -->
@@ -355,13 +357,11 @@ $menu = $app->getMenu();
 if ($menu->getActive() != $menu->getDefault()) {?>
 	<!-- Blog Area
 		================================================== -->
-		
+		<div id="blog-outer">
 		<section id="blog" class="blog-rightsidebar" style="">
 	  
 			<div class="container">
 				<div class="row">
-		  
-				COMPONENT AREA
 				<!-- Begin Content -->
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
@@ -370,7 +370,7 @@ if ($menu->getActive() != $menu->getDefault()) {?>
 				</div><!-- end row -->
 			</div><!-- end container -->		  
 		</section>
-	
+	</div>
 		<!-- Component area End -->
 
 <?php } ?>
