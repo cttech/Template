@@ -44,6 +44,7 @@ $doc->addScript('templates/' . $this->template . '/js/jquery.isotope.min.js');
 $doc->addScript('templates/' . $this->template . '/js/blog/jquery.flexslider-min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.flexisel.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.appear.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.prettyPhoto.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.lightbox.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.custom.js');
 $doc->addScript('templates/' . $this->template . '/js/color-panel.js');
