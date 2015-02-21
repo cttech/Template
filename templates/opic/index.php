@@ -41,20 +41,19 @@ $doc->addScript('templates/' . $this->template . '/js/jquery-1.11.1.min.js');
 $doc->addScript('templates/' . $this->template . '/js/bootstrap.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.easing.1.3.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.isotope.min.js');
+$doc->addScript('templates/' . $this->template . '/js/blog/jquery.flexslider-min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.flexisel.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.appear.js');
-$doc->addScript('templates/' . $this->template . '/js/blog/jquery.flexslider-min.js');
-$doc->addScript('templates/' . $this->template . '/js/jquery.prettyPhoto.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.lightbox.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.custom.js');
 $doc->addScript('templates/' . $this->template . '/js/color-panel.js');
+
 
 
 // Add Stylesheets
 
 
 
-//$doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/reset.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/animate.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.css');
@@ -63,7 +62,6 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/blog/flexslider.css')
 $doc->addStyleSheet('templates/' . $this->template . '/css/style.css');
 $doc->addStyleSheet('templates/' . $this->template . '/fonts/font-awesome/css/font-awesome.min.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/flaticon.css');
-//$doc->addStyleSheet('templates/' . $this->template . '/css/owl.carousel.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/prettyPhoto.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/responsive.css');
 
@@ -162,7 +160,6 @@ else
 							<span class="icon-bar"></span>
 						</button>
 						<!-- Logo -->
-						<a class="navbar-brand" href="#"><img src="images/logo.png" alt="Opic!" class="logo"></a>
 						<a class="navbar-brand" href="<?php echo $this->baseurl; ?>"><?php echo $logo; ?></a>
 					</div>
 					<!-- Navbar Menu Section -->
@@ -183,7 +180,6 @@ else
         ================================================== -->
         <?php if ($this->countModules('slider')) : ?>
 		<div id="#carousel-slider" class="carousel-slider carousel-slider-home">
-        Slider Module
      
 			<jdoc:include type="modules" name="slider" style="xhtml" />
 		</div><!-- Slider Ends -->
@@ -195,11 +191,7 @@ else
 		<section id="services"> 		  
 			<div class="container">
 				<div class="row">
-				SERVICE MODULE
-				
-				<jdoc:include type="modules" name="service" style="xhtml" />
-					
-				
+					<jdoc:include type="modules" name="service" style="xhtml" />
 				</div><!-- end row -->			  
 			</div><!-- end container -->		  
 		</section><!-- end services -->
@@ -210,9 +202,9 @@ else
 		<?php if ($this->countModules('portfolio_content')) : ?>
 		<section id="projects" class="bg-blue">	  
 			<div class="container">
-
+			
 				<div class="row">							  
-					 <jdoc:include type="modules" name="portfolio_content" style="xhtml" />
+				<jdoc:include type="modules" name="portfolio_content" style="xhtml" />	
 				</div>
 			
 			</div><!-- end container -->			
@@ -240,10 +232,6 @@ else
 				<div class="row">		  
 				
 					  <jdoc:include type="modules" name="price_content" style="none" />
-					<!-- end col-md-12 -->
-			  
-			  		<!-- Pricing Inner -->
-					<!-- end col-md-12 -->	
 					
 									
 				</div><!-- end row -->
@@ -257,7 +245,7 @@ else
 	  
 			<div class="container">
 				<div class="row">
-		  BLOG MODULE
+	
 		  			 <jdoc:include type="modules" name="blog" style="xhtml" />
 						
 			
@@ -270,14 +258,13 @@ else
 		================================================== -->
 		<?php if ($this->countModules('newsletter')) : ?>
 		<section id="newsletter" class="bg-yellow">
-			<form name="newsletter" action="#" method="post" class="animated" data-animation="zoomIn" data-animation-delay="300">
-				<input type="text" placeholder="Enter your email address here to subscribe our update, and press Enter!">
-			</form>
+			 <jdoc:include type="modules" name="newsletter" style="xhtml" />
+			
 		</section>
   		<?php endif ?>
 		<!-- About Us And Team Area
 		================================================== -->
-		<?php if ($this->countModules('newsletter')) : ?>
+		<?php if ($this->countModules('team_content')) : ?>
 		<section id="team">
   			<jdoc:include type="modules" name="team_content" style="none" />	
 		</section>  
@@ -304,25 +291,65 @@ else
 		if ($menu->getActive() != $menu->getDefault()) {?>
 	<!-- Blog Area
 		================================================== -->
-		<div id="blog-outer">
-		<section id="blog" class="blog-rightsidebar" style="">
-	  
+		
+		<!-- <section  class="blog-rightsidebar" style=""> -->
+		<div id="blog-outer">		
 			<div class="container">
-				<div class="row">
-				<!-- Begin Content -->
+			<div class="row">
+	  	<?php if ($this->countModules('left-sidebar')) { ?>
+			<!-- Left Part Sidebar -->
+					<div class="col-md-8 col-sm-8">
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+												                        
+					</div><!-- Right Part -->
+					
+					<div class="col-md-4 col-sm-4">
+						<div class="sidebar">
+							<jdoc:include type="modules" name="left-sidebar" style="xhtml" />			
+																				
+						</div><!-- Sidebar Ends -->
+					</div>
+
+
+		<?php } elseif ($this->countModules('right-sidebar')) { ?>
+
+					<div class="col-md-4 col-sm-4">
+						<!-- Sidebar Begins -->
+						<div class="sidebar">
+							<jdoc:include type="modules" name="right-sidebar" style="xhtml" />			
+																				
+						</div><!-- Sidebar Ends -->
+					</div>
+					
+					<!-- Right Part -->
+					<div class="col-md-8 col-sm-8">
+					
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+												                        
+					</div><!-- end col-md-4 -->
+
+		<?php } else  { ?>
+
+			
+				<div class="col-md-12 col-sm-12">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 					<!-- End Content -->
-			
-				</div><!-- end row -->
-			</div><!-- end container -->		  
-		</section>
-	</div>
-		<!-- Component area End -->
+				</div>
+						  
+		
+	
+		
 
+<?php }?>
+</div><!-- end row -->
+</div><!-- end container -->
+</div><!--blog_outer end -->
 <?php } ?>
 		
-	  
+	  <!-- Component area End -->
 		<!-- Socials Area
 		================================================== -->
 		<?php if ($this->countModules('footer_social')) : ?>
@@ -331,7 +358,7 @@ else
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-                    FOOTER SOCIAL MODULE
+                   
 						<jdoc:include type="modules" name="footer_social" style="xhtml" />
 						
 				
@@ -364,7 +391,9 @@ else
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12"> 
-                    	FOOTER        
+                    	<p class="text-center copyright">
+							Copyright <?php echo date('Y'); ?> <a href="<?php echo $this->baseurl; ?>"> <?php echo $sitename; ?></a> All rights reserved. Designed by <a href="#">myboodesign.com</a>
+						</p>        
 						        
 					</div>
 				</div>
