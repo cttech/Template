@@ -293,7 +293,8 @@ else
 		================================================== -->
 		
 		<!-- <section  class="blog-rightsidebar" style=""> -->
-		<div class="container">
+		<div id="blog-outer">		
+			<div class="container">
 			<div class="row">
 	  	<?php if ($this->countModules('left-sidebar')) { ?>
 			<!-- Left Part Sidebar -->
@@ -340,14 +341,15 @@ else
 						  
 		
 	
-		<!-- Component area End -->
+		
 
 <?php }?>
 </div><!-- end row -->
 </div><!-- end container -->
+</div><!--blog_outer end -->
 <?php } ?>
 		
-	  
+	  <!-- Component area End -->
 		<!-- Socials Area
 		================================================== -->
 		<?php if ($this->countModules('footer_social')) : ?>
