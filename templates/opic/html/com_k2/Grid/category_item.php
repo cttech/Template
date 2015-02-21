@@ -12,18 +12,10 @@ defined('_JEXEC') or die;
 
 // Define default image size (do not change)
 K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
-print_r($this->item);
+//print_r($this->item);
 ?>
 <div class="blog-container animated catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php echo ($this->item->featured) ? ' catItemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>" data-animation="fadeInUp" data-animation-delay="300">
-	<div class="flexslider1 flex-direction-nav-on-top">
-									<!-- Slider Images -->
-									<ul class="slides">
-										<li><img src="images/blog/blog-grid/1.jpg" alt="photo blog" class="img-responsive pull-left blog-image"></li>
-										<li><img src="images/blog/blog-grid/2.jpg" alt="photo blog" class="img-responsive pull-left blog-image"></li>
-										<li><img src="images/blog/blog-grid/3.jpg" alt="photo blog" class="img-responsive pull-left blog-image"></li>
-									</ul>
-								</div>
-	<?php if(isset($this->item->image) && !empty($this->item->image)): ?>
+		<?php if(isset($this->item->image) && !empty($this->item->image)): ?>
 	<img src="<?php echo $this->item->image;?>" alt="photo blog" class="img-responsive pull-left blog-image">
 	<?php endif; ?>
 	<?php if($this->item->params->get('catItemVideo') && !empty($this->item->video)): ?>
