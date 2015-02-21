@@ -57,26 +57,19 @@
 					label="TPL_PROTOSTAR_COLOR_LABEL"
 					description="TPL_PROTOSTAR_COLOR_DESC"> 
 					<option value="blue">Blue</option>
-					<option value="blue-2">Blue 2</option>
-					<option value="beige">Beige</option>
-					<option value="black">Black</option>
-					<option value="pink">Pink</option>
-					<option value="pink-2">Pink 2</option>
 					<option value="green">Green</option>
-					<option value="green-2">Green 2</option>
-					<option value="midnight">Midnight</option>
+					<option value="orange">Orange</option>
 					<option value="purple">Purple</option>
 					<option value="red">Red</option>
-					<option value="red-2">Red 2</option>
-					<option value="red-3">Red 3</option>
-					<option value="orange">Orange</option>
-					<option value="yellow">Yellow</option>
+					<option value="s-blue">S-Blue</option>
+					<option value="beige">P-Green</option>
+					<option value="black">S-Green</option>
 				</field>
 
-				<field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
+				<!-- <field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
 					label="TPL_PROTOSTAR_BACKGROUND_COLOR_LABEL"
 					description="TPL_PROTOSTAR_BACKGROUND_COLOR_DESC" />
-
+ -->
 				<field name="logoFile" class="" type="media" default=""
 					label="TPL_PROTOSTAR_LOGO_LABEL"
 					description="TPL_PROTOSTAR_LOGO_DESC" />

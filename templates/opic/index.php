@@ -75,6 +75,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 if ($this->params->get('logoFile'))
 {
 	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+	//echo $logo;
 }
 elseif ($this->params->get('sitetitle'))
 {
@@ -125,10 +126,24 @@ else
   	<body>
 	
 		<!-- Page Loader -->
+		<?php 
+		$loderimg="";
+		if(($params->get('loderimg'))!=null){
+            $loderimg= $params->get('loderimg');}
+		?>
+		<?php if ($loderimg!="") { ?>
+		<div id="pageloader">   
+            <div class="loader-item fa fa-spin colored-border">
+				<img src="<?php echo $this->params->get('loderimg');?>" alt="loader">
+            </div>
+        </div>
+		<?php } else { ?>
+
+
 		<div id="pageloader">
 			<div class="loader-item fa fa-spin colored-border"></div>
 		</div>
-		
+		<?php } ?>
         <!-- Header Area Begins 
         ================================================== -->
 		<header id="top">
@@ -144,41 +159,16 @@ else
 							<span class="icon-bar"></span>
 						</button>
 						<!-- Logo -->
-						<a class="navbar-brand" href="#"><img src="images/logo.png" alt="Opic!" class="logo"></a>
+						<a class="navbar-brand" href="<?php echo $this->baseurl; ?>"><?php echo $logo; ?></a>
 					</div>
 					<!-- Navbar Menu Section -->
 					<div class="navbar-collapse collapse">
 						
-			
+					<?php if ($this->countModules('mainnav')) : ?>
 						<nav>
 							<jdoc:include type="modules" name="mainnav" style="none" />
-
-							<!--  <ul class="nav navbar-nav navbar-right">
-								<li><a href="#top" class="scroll">Home</a></li>
-								<li><a href="#services" class="scroll">Services</a></li>
-								<li><a href="#projects" class="scroll">Works</a></li>
-								<li><a href="#pricing" class="scroll">Pricing</a></li>
-								<li><a href="#blog" class="scroll">Blog</a></li>
-								<li><a href="#team" class="scroll">Team</a></li>
-								<li><a href="#contact" class="scroll">Contact</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras</a>
-									<span class="menu-toggler collapsed" data-toggle="collapse" data-target=".collapse-1">
-										<i class="fa fa-angle-down"></i>
-									</span>
-								
-									<ul role="menu" class="menulist dropdown-menu collapse-1 collapse">
-										<li><a href="blog-leftsidebar.html">Blog - Left Sidebar</a></li>
-										<li><a href="blog-rightsidebar.html">Blog - Right Sidebar</a></li>
-										<li><a href="blog-single.html">Blog - Single</a></li>
-										<li><a href="blog-grid.html">Blog - Grid</a></li>
-										<li><a href="blog-timeline.html">Blog - Timeline</a></li>
-										<li><a href="faq.html">Faq</a></li>
-										<li class="bottom-menu"><a href="shortcodes.html">Shortcodes</a></li>
-									</ul> 
-								</li>
-							</ul> -->
 						</nav>
+					<?php endif ?>
 					</div><!-- Navbar Menu Section Ends -->
 				</div>
 			</div>
@@ -187,172 +177,121 @@ else
 		
         <!-- Slider Area
         ================================================== -->
+        <?php if ($this->countModules('slider')) : ?>
 		<div id="#carousel-slider" class="carousel-slider carousel-slider-home">
-        Slider Module
+     
 			<jdoc:include type="modules" name="slider" style="xhtml" />
 		</div><!-- Slider Ends -->
-
+		<?php endif ?>
   
 		<!-- Services Area
 		================================================== -->
+		<?php if ($this->countModules('service')) : ?>
 		<section id="services"> 		  
 			<div class="container">
 				<div class="row">
-				SERVICE MODULE
+				
 				<jdoc:include type="modules" name="service" style="xhtml" />
-					<!-- end col-md-12 -->
-			  
-					<!-- CMS Website Services -->
-					<!-- end col-md-12 -->
-								
-					<!-- E-Commerse Website Services -->
-					<!-- end col-md-12 -->
-				
-				
-					<!-- HTML Website Services -->
-					<!-- end col-md-12 -->
+					
 				
 				</div><!-- end row -->			  
 			</div><!-- end container -->		  
 		</section><!-- end services -->
-		
+		<?php endif ?>
   
 		<!-- Project Area
 		================================================== -->
+		<?php if ($this->countModules('service')) : ?>
 		<section id="projects" class="bg-blue">	  
 			<div class="container">
-			WORKS MOdule
+			
 				<div class="row">							  
 					
 				</div>
-					
-				<!-- Portfolio Filter Begins -->
-				
-						
-				<!-- Portfolio Container Begins -->
-				<!-- end portfolioContainer -->	 
+			
 			</div><!-- end container -->			
 		</section><!-- end projects -->
-  
+  		<?php endif ?>
   
 		<!-- Fun Fact Area
 		================================================== -->
+		<?php if ($this->countModules('fact_content')) : ?>
 		<section id="facts" class="bg-dark-blue">  
 	  
 			<div class="container">
             
 				<div class="row">
-                OUR SPACE MODULE
-                <jdoc:include type="modules" name="fact_content" style="xhtml" />
-		  			<!-- Fun Fact Box 1 -->
-					
-					<!-- Fun Fact Box 2 -->
-					
-					<!-- Fun Fact Box 3 -->
-					
-					<!-- Fun Fact Box 4 -->
-							  
-				</div><!-- end row -->   
+               		<jdoc:include type="modules" name="fact_content" style="xhtml" />
+		  		</div><!-- end row -->   
 			</div><!-- end container -->		
 		</section>
-  
+  		<?php endif ?>
 		<!-- Pricing Area
 		================================================== -->
+		<?php if ($this->countModules('price_content')) : ?>
 		<section id="pricing">
 			<div class="container">
 				<div class="row">		  
 				
 					  <jdoc:include type="modules" name="price_content" style="none" />
-					<!-- end col-md-12 -->
-			  
-			  		<!-- Pricing Inner -->
-					<!-- end col-md-12 -->	
+					
 									
 				</div><!-- end row -->
 			</div><!-- end container -->		
 		</section>
-  
+  		<?php endif ?>
 		<!-- Blog Area
 		================================================== -->
+		<?php if ($this->countModules('blog')) : ?>
 		<section id="blog" class="bg-red">
 	  
 			<div class="container">
 				<div class="row">
 		  BLOG MODULE
 		  			 <jdoc:include type="modules" name="blog" style="xhtml" />
-					<!-- end col-md-12 -->
-			
-					<!-- end col-md-12 -->
-					
-					<!-- Blog Bottom Begins -->
-					<!-- Blog Bottom Ends -->
-					
-					<!-- Load More Post Button -->
-					<!-- Load More Button Ends -->			
+						
 			
 				</div><!-- end row -->
 			</div><!-- end container -->
 		  
 		</section>
-  
+  		<?php endif ?>
 		<!-- Newsletter Area
 		================================================== -->
+		<?php if ($this->countModules('newsletter')) : ?>
 		<section id="newsletter" class="bg-yellow">
 			<form name="newsletter" action="#" method="post" class="animated" data-animation="zoomIn" data-animation-delay="300">
 				<input type="text" placeholder="Enter your email address here to subscribe our update, and press Enter!">
 			</form>
 		</section>
-  
+  		<?php endif ?>
 		<!-- About Us And Team Area
 		================================================== -->
+		<?php if ($this->countModules('newsletter')) : ?>
 		<section id="team">
-  
-			
-   
-			<!-- team start -->    
-		
-			 <jdoc:include type="modules" name="team_content" style="none" />
-		
-			<!-- team are end -->
-			
+  			<jdoc:include type="modules" name="team_content" style="none" />	
 		</section>  
-  
+  		<?php endif ?>
 		<!-- Contact Us Area
 		================================================== -->
+		<?php if ($this->countModules('contactform')) : ?>
 		<section id="contact">
 	  
 			<div class="container">
 				<div class="row">
-		  
-					<div class="col-md-12">   
-                    CONTACT US UPPER MODULE     
-						<jdoc:include type="modules" name="contactform_upper" style="xhtml" />
-			   		
-					</div><!-- end col-md-12 -->
-			
-					<div class="col-md-12">
-						<div class="col-md-6 animated" data-animation="fadeIn" data-animation-delay="300">
-                        	CONTACT FORM left MODULE
-							<jdoc:include type="modules" name="contactform_upper" style="xhtml" />
-						</div><!-- end col-md-6-->
-			  
-						<div id="contacInfo" class="col-md-6">
-			  				CONTACT FORM RIGHT  MODULE
-							<jdoc:include type="modules" name="contactform_upper" style="xhtml" />
-						</div><!-- end col-md-6-->
-			  
-					</div><!-- end col-md-12 -->
-			
+		  			 CONTACT US UPPER MODULE     
+						<jdoc:include type="modules" name="contactform" style="xhtml" />
 				</div><!-- end row -->
 			</div><!-- end container -->
 	   
 		</section>
+		<?php endif ?>
         <!-- Component area  -->
 		
 		<?php
-$app = JFactory::getApplication();
-$menu = $app->getMenu();
-if ($menu->getActive() != $menu->getDefault()) {?>
+		$app = JFactory::getApplication();
+		$menu = $app->getMenu();
+		if ($menu->getActive() != $menu->getDefault()) {?>
 	<!-- Blog Area
 		================================================== -->
 		
@@ -378,6 +317,7 @@ if ($menu->getActive() != $menu->getDefault()) {?>
 	  
 		<!-- Socials Area
 		================================================== -->
+		<?php if ($this->countModules('footer_social')) : ?>
 		<section id="socials" class="bg-dark-blue">
 	  
 			<div class="container">
@@ -392,9 +332,11 @@ if ($menu->getActive() != $menu->getDefault()) {?>
 			</div><!-- end container -->
 		
 		</section>
+		<?php endif ?>
 	  
 		<!-- Client Area
 		================================================== -->
+		<?php if ($this->countModules('footer_client')) : ?>
 		<section id="clients" class="bg-very-dark-blue">
 		
 			<div class="container">
@@ -407,7 +349,7 @@ if ($menu->getActive() != $menu->getDefault()) {?>
 			</div><!-- end container -->
 				
 		</section>
-	  
+	  <?php endif ?>
 		<!-- Copyright Area
 		================================================== -->
 		<section id="copyright" class="bg-cyan">
@@ -420,76 +362,6 @@ if ($menu->getActive() != $menu->getDefault()) {?>
 				</div>
 			</div>	
 		</section>    
-		
-		<!-- Color Switcher 
-		================================================== -->
-		<!-- <section id="theme-panel" class="close-theme-panel">
-			
-			<a class="panel-button dark"><i class="fa fa-dot-circle-o"></i></a>
-			<div class="segment">
-				<h4 class="dark condensed semibold uppercase no-margin no-padding">Color Switcher</h4>
-			</div>		
-			
-			<div class="segment">			
-				<a title="green" class="switcher green-bg">
-					<div class="devider">
-						<div class="devider-round-out devider-round-out-green">
-							<div class="devider-round-in devider-round-in-green"></div>
-						</div>
-					</div>
-				</a>
-				<a title="blue" class="switcher blue-bg">
-					<div class="devider">
-						<div class="devider-round-out devider-round-out-blue-bg">
-							<div class="devider-round-in devider-round-in-blue-bg"></div>
-						</div>
-					</div>	
-				</a>
-				<a title="orange" class="switcher orange-bg">
-					<div class="devider">
-						<div class="devider-round-out devider-round-out-orange-bg">
-							<div class="devider-round-in devider-round-in-orange-bg"></div>
-						</div>
-					</div>
-				</a>
-				<a title="purple" class="switcher purple-bg">
-					<div class="devider">
-						<div class="devider-round-out devider-round-out-purple-bg">
-							<div class="devider-round-in devider-round-in-purple-bg"></div>
-						</div>
-					</div>
-				</a>
-				<a title="red" class="switcher red-bg">
-					<div class="devider">
-						<div class="devider-round-out devider-round-out-red-bg">
-							<div class="devider-round-in devider-round-in-red-bg"></div>
-						</div>
-					</div>	
-				</a>
-				<a title="s-green" class="switcher s-green-bg">
-					<div class="devider">
-						<div class="devider-round-out devider-round-out-s-green-bg">
-							<div class="devider-round-in devider-round-in-s-green-bg"></div>
-						</div>
-					</div>	
-				</a>
-				<a title="s-blue" class="switcher s-blue-bg">
-					<div class="devider">
-						<div class="devider-round-out devider-round-out-s-blue-bg">
-							<div class="devider-round-in devider-round-in-s-blue-bg"></div>
-						</div>
-					</div>
-				</a>
-				<a title="p-green" class="switcher p-green-bg">
-					<div class="devider">
-						<div class="devider-round-out devider-round-out-p-green-bg">
-							<div class="devider-round-in devider-round-in-p-green-bg"></div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</section> --><!-- End Color Switcher --> 
-
-				<jdoc:include type="modules" name="debug" style="none" />
+		<jdoc:include type="modules" name="debug" style="none" />
 	</body>
 </html>
