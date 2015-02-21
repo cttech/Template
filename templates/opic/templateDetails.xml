@@ -33,16 +33,13 @@
 		<position>portfolio_content</position>
 		<position>fact_content</position>
 		<position>price_content</position>
-		<position>subscribe_content</position>
+		<position>newsletter</position>
 		<position>blog</position>
 		<position>team_upper</position>
-		<position>contactform_upper</position>
+		<position>left-sidebar</position>
 		<position>contactform</position>
-		<position>contact_details</position>
+		<position>right-sidebar</position>
 		<position>footer_social</position>
-	
-		
-		
 		<position>footer_client</position>
 		<position>position-8</position>
 	</positions>
