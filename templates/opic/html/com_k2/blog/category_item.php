@@ -65,11 +65,6 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	  	<?php echo $this->item->introtext; ?>
 	  </p>
 	  <?php endif; ?>
-	<!-- <p>
-		Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt
-		ut labore et dolore magna aliqua.Ut enim ad minim ven iamquis nostrud exercitation. Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim ven iamquis nostrud exercitation.
-	</p> -->
-
 	<ul class="blog-attr">
 	
 		<li class="blog-comment text-center">
@@ -93,16 +88,9 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 		<?php endif; ?>
 	
 	<?php endif; ?>
-			<!-- <a href="#"> 2,345</a> -->
 		</li>
 		<?php if($this->item->params->get('catItemRating')): ?>	
 		<li class="blog-rate text-center">
-			<!-- <i class="fa fa-star fa-1ax yellow"></i>
-			<i class="fa fa-star fa-1ax yellow"></i>
-			<i class="fa fa-star fa-1ax yellow"></i>
-			<i class="fa fa-star fa-1ax yellow"></i>
-			<i class="fa fa-star fa-1ax yellow"></i> -->
-
 	<!-- Item Rating -->
 			<ul class="itemRatingList">
 				<li class="itemCurrentRating" id="itemCurrentRating<?php echo $this->item->id; ?>" style="width:<?php echo $this->item->votingPercentage; ?>%;"></li>

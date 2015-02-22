@@ -294,7 +294,8 @@ else
 		================================================== -->
 		
 		<!-- <section  class="blog-rightsidebar" style=""> -->
-		<div id="blog-outer">		
+		<div id="blog-outer">	
+		<section id="blog" class="blog-rightsidebar blog-single"> 	<!-- this should be chnaged --> 
 			<div class="container">
 			<div class="row">
 	  	<?php if ($this->countModules('left-sidebar')) { ?>
@@ -347,6 +348,7 @@ else
 <?php }?>
 </div><!-- end row -->
 </div><!-- end container -->
+</section>
 </div><!--blog_outer end -->
 <?php } ?>
 		
