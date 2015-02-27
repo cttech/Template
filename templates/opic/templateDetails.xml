@@ -27,6 +27,7 @@
 	<positions>
 		
 		<position>mainnav</position>
+		<position>page-title</position>
 		<position>slider</position>
 		<position>service</position>
 		<position>team_content</position>

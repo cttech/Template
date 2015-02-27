@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
 		<div id="itemListLeading">
 			<?php foreach($this->leading as $key=>$item): ?>
 
-			<div class="itemContainer<?php echo ' '. 'grid-item'?>">
+			<div class="itemContainer<?php echo ' '. 'grid-item'?>"<?php echo (count($this->leading)==1) ? '' : ' style="width:'.number_format(100/$this->params->get('num_leading_columns'), 1).'%;"'; ?>>
 				<?php
 					// Load category_item.php by default
 					$this->item=$item;
@@ -42,7 +42,7 @@ defined('_JEXEC') or die;
 		<div id="itemListPrimary">
 			<?php foreach($this->primary as $key=>$item): ?>
 			
-			<div class="itemContainer<?php echo ' '. 'grid-item'?>">
+			<div class="itemContainer<?php echo ' '. 'grid-item'?>"<?php echo (count($this->primary)==1) ? '' : ' style="width:'.number_format(100/$this->params->get('num_primary_columns'), 1).'%;"'; ?>>
 				<?php
 					// Load category_item.php by default
 					$this->item=$item;
@@ -70,7 +70,7 @@ defined('_JEXEC') or die;
 				$lastContainer='';
 			?>
 			
-			<div class="itemContainer<?php echo ' '. 'grid-item'?>">
+			<div class="itemContainer<?php echo ' '. 'grid-item'?>"<?php echo (count($this->secondary)==1) ? '' : ' style="width:'.number_format(100/$this->params->get('num_secondary_columns'), 1).'%;"'; ?>>
 				<?php
 					// Load category_item.php by default
 					$this->item=$item;

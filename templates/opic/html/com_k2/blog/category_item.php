@@ -89,7 +89,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	
 	<?php endif; ?>
 		</li>
-		<?php if($this->item->params->get('catItemRating')): ?>	
+	<?php if($this->item->params->get('catItemRating')): ?>	
 		<li class="blog-rate text-center">
 	<!-- Item Rating -->
 			<ul class="itemRatingList">
@@ -100,7 +100,8 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_4_STARS_OUT_OF_5'); ?>" class="four-stars">4</a></li>
 				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_5_STARS_OUT_OF_5'); ?>" class="five-stars">5</a></li>
 			</ul>
-		</li><?php endif; ?>
+		</li>
+	<?php endif; ?>
 		<?php if ($this->item->params->get('catItemReadMore')): ?>
 		<li class="blog-next text-center">
 		<a class="k2ReadMore" href="<?php echo $this->item->link; ?>">

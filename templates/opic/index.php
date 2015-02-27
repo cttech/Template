@@ -148,6 +148,8 @@ else
 		<?php } ?>
         <!-- Header Area Begins 
         ================================================== -->
+        <div id="sticky-section" class="sticky-navigation">
+			<div class="top-container">
 		<header id="top">
 			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container no-container">
@@ -175,6 +177,8 @@ else
 				</div>
 			</div>
 		</header><!-- Header Ends -->
+	</div>
+</div>
 		
 		
         <!-- Slider Area
@@ -298,6 +302,11 @@ else
 		<section id="blog" class="blog-rightsidebar blog-single"> 	<!-- this should be chnaged --> 
 			<div class="container">
 			<div class="row">
+		<?php if ($this->countModules('page-title')): ?>
+			<div class="col-md-12"> 
+				<jdoc:include type="modules" name="page-title" style="xhtml" />			       
+			</div>
+		<?php endif; ?>
 	  	<?php if ($this->countModules('left-sidebar')) { ?>
 			<!-- Left Part Sidebar -->
 					<div class="col-md-8 col-sm-8">
