@@ -16,6 +16,17 @@ defined('_JEXEC') or die;
 	<?php if(isset($this->item->image) && !empty($this->item->image)): ?>
 	<img src="<?php echo $this->item->image;?>" alt="photo blog" class="img-responsive pull-left blog-image">
 	<?php endif; ?>
+	<?php if($this->item->params->get('catItemVideo') && !empty($this->item->video)): ?>
+	  <!-- Item video -->
+			<?php if($this->item->videoType=='embedded'): ?>
+			
+			<?php echo $this->item->video; ?>
+			
+			<?php else: ?>
+			<span class="catItemVideo"><?php echo $this->item->video; ?></span>
+			<?php endif; ?>
+	
+  <?php endif; ?>
 	 <?php if($this->item->params->get('itemTitle')): ?>
 	  <!-- Item title -->
 	  <h5 class="itemTitle">

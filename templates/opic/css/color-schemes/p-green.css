@@ -22,7 +22,8 @@
 #blog-outer .blog-single .comments i,
 #blog-outer .blog-single .comment-wrap .name,
 #blog-outer .blog-single .comment-wrap .reply-btn,
-#blog-outer .blog-single blockquote i{
+#blog-outer .blog-single blockquote i,
+div.k2CategoriesListBlock ul li:after{
 	color:#2ecc71 !important;
 }
 
