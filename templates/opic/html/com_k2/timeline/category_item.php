@@ -72,6 +72,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 				<i class="fa fa-star fa-1ax yellow"></i>
 				<i class="fa fa-star fa-1ax yellow"></i>
 			</li> -->
+
 		<?php if($this->item->params->get('catItemRating')): ?>	
 		<li class="blog-rate text-center">
 	<!-- Item Rating -->

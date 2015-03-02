@@ -66,7 +66,14 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/flaticon.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/prettyPhoto.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/responsive.css');
 
-
+// component section class 
+$componentCls = '';
+if ($this->countModules('left-sidebar')) {
+	$componentCls = 'blog-leftsidebar';
+}
+if ($this->countModules('right-sidebar')) {
+	$componentCls = 'blog-rightsidebar';
+}
 
 // Load optional RTL Bootstrap CSS
 JHtml::_('bootstrap.loadCss', false, $this->direction);
@@ -281,7 +288,6 @@ else
 	  
 			<div class="container">
 				<div class="row">
-		  			 CONTACT US UPPER MODULE     
 						<jdoc:include type="modules" name="contactform" style="xhtml" />
 				</div><!-- end row -->
 			</div><!-- end container -->
@@ -299,7 +305,7 @@ else
 		
 		<!-- <section  class="blog-rightsidebar" style=""> -->
 		<div id="blog-outer">	
-		<section id="blog" class="blog-rightsidebar blog-single"> 	<!-- this should be chnaged --> 
+		<section id="blog" class="<?php echo $componentCls;?> blog-single"> 	<!-- this should be chnaged --> 
 			<div class="container">
 			<div class="row">
 		<?php if ($this->countModules('page-title')): ?>
@@ -307,7 +313,7 @@ else
 				<jdoc:include type="modules" name="page-title" style="xhtml" />			       
 			</div>
 		<?php endif; ?>
-	  	<?php if ($this->countModules('left-sidebar')) { ?>
+	  	<?php if ($this->countModules('right-sidebar')) { ?>
 			<!-- Left Part Sidebar -->
 					<div class="col-md-8 col-sm-8">
 					<jdoc:include type="message" />
@@ -317,18 +323,18 @@ else
 					
 					<div class="col-md-4 col-sm-4">
 						<div class="sidebar">
-							<jdoc:include type="modules" name="left-sidebar" style="xhtml" />			
+							<jdoc:include type="modules" name="right-sidebar" style="xhtml" />			
 																				
 						</div><!-- Sidebar Ends -->
 					</div>
 
 
-		<?php } elseif ($this->countModules('right-sidebar')) { ?>
+		<?php } elseif ($this->countModules('left-sidebar')) { ?>
 
 					<div class="col-md-4 col-sm-4">
 						<!-- Sidebar Begins -->
 						<div class="sidebar">
-							<jdoc:include type="modules" name="right-sidebar" style="xhtml" />			
+							<jdoc:include type="modules" name="left-sidebar" style="xhtml" />			
 																				
 						</div><!-- Sidebar Ends -->
 					</div>
@@ -388,10 +394,10 @@ else
 		
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">	
-                    FOOTER TOP CLIENT MODULE			
+					
+                   <jdoc:include type="modules" name="footer_client" style="xhtml" />	
 						
-					</div>
+					
 				</div><!-- end row -->
 			</div><!-- end container -->
 				

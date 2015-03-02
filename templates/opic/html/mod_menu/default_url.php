@@ -33,6 +33,12 @@ if ($item->deeper){
 
 $flink = $item->flink;
 $flink = JFilterOutput::ampReplace(htmlspecialchars($flink));
+
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+if ($menu->getActive() != $menu->getDefault()) {
+        $flink= JURI::base( true ).'/'.$flink;
+}
 //print_r($item);
 switch ($item->browserNav) :
 	default:

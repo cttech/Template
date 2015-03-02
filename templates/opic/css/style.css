@@ -1130,6 +1130,7 @@ ul.logo-client li > a > img:hover {
 .sidebar .recent-posts .thumbnail a > img{
 	height:75px;
 	width:75px;
+	margin: 0px;
 }
 /* Tags */
 .sidebar .tags li{
@@ -1181,7 +1182,7 @@ ul.logo-client li > a > img:hover {
 #blog-outer .blog-container img.blog-image, .blog-container iframe{
 	padding:8px;
 }
-#blog-outer .blog-container h5 a{
+#blog-outer .blog-container h5{
 	color:#1abc9c;
 	margin-left:20px;
 }
@@ -1398,14 +1399,14 @@ ul.logo-client li > a > img:hover {
 	width:32%;
 	padding:0px 5px;
 }
-#blog-outer .grid-item .blog-container{
+/* #blog-outer .grid-item .blog-container{
 	margin-top:20px;
-}
+} */
 #blog-outer .grid-item iframe {
-    height: 255px;
+   /*  height: 255px; */
     width: 100%;
 }
-#blog-outer .portfolio-container, #blog-outer .portfolio-container-blog{
+#blog-outer .portfolio-container, /* #blog-outer .portfolio-container-blog */{
 	margin:10px 0px;
 }
 /* Faq */
@@ -1770,6 +1771,7 @@ ul.logo-client li > a > img:hover {
     top: 0;
     width: 100%;
 }
+
 /* k2 rating */ 
 
 div.itemRatingBlock{ padding: 0 !important;}
@@ -1782,7 +1784,7 @@ div.k2CategoriesListBlock ul li{
 div.k2CategoriesListBlock ul li:after {
 	content: "\f192";
 	font-family: FontAwesome;
-	padding-right: 15px;
+	/* padding-right: 15px; */
 	line-height: 26px;
 	color: #1abc9c;
 	float: right;
@@ -1819,4 +1821,8 @@ color: #fff;
 div.k2TagCloudBlock a:hover{
 	background: none;
 	text-decoration: underline;
+}
+/* k2 listing */
+div.catItemView{
+	padding: 0px;
 }

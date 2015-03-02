@@ -11,7 +11,7 @@
 defined('_JEXEC') or die;
 
 ?>
-<div class="itemListView<?php if($this->params->get('pageclass_sfx')) echo ' '.$this->params->get('pageclass_sfx'); ?><?php echo ' '.'col-md-12 portfolio-container-blog'?>">
+<div class="itemListView<?php if($this->params->get('pageclass_sfx')) echo ' '.$this->params->get('pageclass_sfx'); ?><?php echo ' '.'portfolio-container-blog'?>">
 
 	<?php if((isset($this->leading) || isset($this->primary) || isset($this->secondary) || isset($this->links)) && (count($this->leading) || count($this->primary) || count($this->secondary) || count($this->links))): ?>
 	<!-- Item list -->
