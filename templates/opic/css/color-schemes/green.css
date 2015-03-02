@@ -26,6 +26,18 @@
 div.k2CategoriesListBlock ul li:after{
 	color:#1abc9c !important;
 }
+/* pagination */
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+	background-color: #1abc9c !important;
+	border-color: #1abc9c !important;
+	color: #fff !important;
+}
+.pagination > li > a, .pagination > li > span{
+	color: #1abc9c !important;
+}
+div.k2Pagination{
+	color: #1abc9c !important;
+}
 
 /* Background Color */
 .timeline-title span,

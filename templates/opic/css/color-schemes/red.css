@@ -26,7 +26,18 @@
 div.k2CategoriesListBlock ul li:after{
 	color:#e74c3c !important;
 }
-
+/* pagination */
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+	background-color: #e74c3c !important;
+	border-color: #e74c3c !important;
+	color: #fff !important;
+}
+.pagination > li > a, .pagination > li > span{
+	color: #e74c3c !important;
+}
+div.k2Pagination{
+	color: #e74c3c !important;
+}
 /* Background Color */
 .timeline-title span,
 .blog-timeline-event-left:before ,

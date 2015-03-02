@@ -1127,6 +1127,9 @@ ul.logo-client li > a > img:hover {
 .sidebar .recent-posts li{
 	margin-bottom:40px;
 }
+.sidebar .recent-posts li .title{
+	min-height:30px;
+}
 .sidebar .recent-posts .thumbnail a > img{
 	height:75px;
 	width:75px;
@@ -1396,7 +1399,7 @@ ul.logo-client li > a > img:hover {
 }
 /* Blog Grid */
 #blog-outer .grid-item{
-	width:32%;
+	/* width:32%; */
 	padding:0px 5px;
 }
 /* #blog-outer .grid-item .blog-container{
