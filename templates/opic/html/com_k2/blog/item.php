@@ -109,16 +109,28 @@ defined('_JEXEC') or die;
 </div><hr>
 
 <!-- Share This Post -->
+<?php if($this->item->params->get('itemTwitterButton',1) || $this->item->params->get('itemFacebookButton',1)): ?>
 <div class="share-post animated" data-animation="fadeInUp" data-animation-delay="300">
 	<h5><i class="fa fa-share"></i>Share this post</h5>
 	<div class="social-post">
-		<a href="#"><i class="fa fa-facebook"></i></a>
-		<a href="#"><i class="fa fa-twitter"></i></a>
-		<a href="#"><i class="fa fa-pinterest"></i></a>
-		<a href="#"><i class="fa fa-linkedin"></i></a>
+		
+		<?php if($this->item->params->get('itemFacebookButton',1)): ?>
+		<!-- Facebook -->
+		<a href="http://www.facebook.com/sharer.php?u=<?php echo JURI::current();?>" target="_blank"><i class="fa fa-facebook"></i></a>
+		 <?php endif; ?>
+		 <?php if($this->item->params->get('itemTwitterButton',1)): ?>
+		<!-- Twitter -->
+		<a href="http://twitter.com/share?url=<?php echo JURI::current();?>&text=<?php echo $this->item->title;?>&hashtags=<?php echo $this->item->tags[0]->name;?>" target="_blank"><i class="fa fa-twitter"></i></a>
+		 <?php endif; ?>
+		<!-- Pinterest -->
+		<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><i class="fa fa-pinterest"></i></a>
+		 
+		<!-- LinkedIn -->
+		<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo JURI::current();?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+
 	</div>
 </div>	
-		
+<?php endif; ?>	
 <?php if($this->item->params->get('itemAuthorBlock') && empty($this->item->created_by_alias)): ?>
 <!-- Author -->
 <div class="author animated" data-animation="fadeInUp" data-animation-delay="300">

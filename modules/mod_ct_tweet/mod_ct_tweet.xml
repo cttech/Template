@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.1" method="upgrade">
+	<name>MOD_CT_TWEET</name>
+	<creationDate>15/02/2015</creationDate>
+	<author>Ashiq Ahmed</author>
+	<authorEmail>contact@cttechbd.com</authorEmail>
+	<authorUrl>http://www.cttechbd.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>1.0</version>
+	<description>MOD_CT_TWEET_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_ct_tweet">mod_ct_tweet.php</filename>
+		<filename>mod_ct_tweet.xml</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>twitteroauth</folder>
+		<folder>language</folder>
+	</files>
+		<config>
+		<fields name="params">
+			<fieldset name="twitter_details" label="TWITTER_DETAILS">
+				<!-- <field name="tm1" type="media" label="Image"  description="Choose an image." /> -->
+				<field name="twitteruser" type="text" label="TWEETER_USER_NAME" description="TWEETER_USER_NAME_DESC"/>
+				<field name="notweets" type="text" label="NO_OF_TWEET" description="NO_OF_TWEET_DESC"/>
+
+				<field name="consumerkey" type="text" label="ADD_CONSUMER_KEY" description="CONSUMER_KEY_DESC"/>
+				<field name="consumersecret" type="text" default="" label="ADD_CONSUMER_SECRET_KEY" description="CONSUMER_SECRET_KEY_DESC"/>		
+				<field name="accesstoken" type="text" default="" label="ADD_ACCESS_TOKEN" description="ACCESS_TOKEN_DESC"/>		
+                <field name="accesstokensecret" type="text" default="" label="ADD_ACCESS_TOKEN_SECRET_KEY" description="ACCESS_TOKEN_SECRET_KEY_DESC"/>
+                
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

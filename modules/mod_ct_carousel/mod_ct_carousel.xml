@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.1" method="upgrade">
+	<name>MOD_CT_CAROUSEL</name>
+	<creationDate>15/02/2015</creationDate>
+	<author>Ashiq Ahmed</author>
+	<authorEmail>contact@cttechbd.com</authorEmail>
+	<authorUrl>http://www.cttechbd.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>1.0</version>
+	<description>MOD_CT_CAROUSEL_XML_DESCRIPTION</description>
+
+<files>
+	<filename module="mod_ct_carousel">mod_ct_carousel.php</filename>
+	<filename>index.html</filename>
+	<filename>mod_ct_carousel.xml</filename>
+	<folder>tmpl</folder>
+	<folder>css</folder>
+	<folder>js</folder>
+</files>
+
+<config>
+	<fields name="params">
+		 
+		 <fieldset name="effect" label="Select Slideshow">
+		 	 <field name="SelectEffect" type="list" default="slider" label="Select Option"
+					description="Select Slideshow Option">
+					<option value="carousel">Carousel Slideshow</option>
+					<option value="video">Video Slideshow</option>
+					
+		    </field>
+		 </fieldset>	
+				
+		<fieldset name="ImageOptions" label="Image Options">
+			
+			
+			<!--SlideShow 1-->
+			<field type="spacer" name="Image-1" label="Image1" />
+			
+			<field type="spacer" name="@spacer00" hr="true"/>
+			
+			<field name="image1" type="media" size="30" default="images/slider/devices.png" label="Image Name" 
+										description="Name of the image | Change the name of Image as per your wish." />
+			
+			<field name="title1" type="text" size="70" default="We Love Responsive" label="Title For Image1" description="Enter the title for Effect 2" filter="raw" />
+			
+			<field name="desc1" type="textarea" rows="5" cols="30" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit praesent egestas justo sed sagittis interdum pellentesque sed ipsum eu risus sagittis varius. Suspendisse sed sapien dictum." label="Description" 
+										description="Enter the Description for Image 1" filter="raw"/>
+										
+			<field name="link1" type="text" size="70" default="#" label="Link" description="Enter the link" filter="raw" />	
+			<field name="link1_title" type="text" size="70" default="Learn More" label="Link Title" description="Enter the link Title" filter="raw" />	
+										
+			<field type="spacer" name="@spacer01" hr="true"/>
+			
+			
+			<!--SlideShow 2-->
+			<field type="spacer" name="Image-2" label="Image2" />
+			
+			<field type="spacer" name="@spacer02" hr="true"/>
+			
+			<field name="image2" type="media" size="30" default="images/slide2.jpg" label="Image Name" 
+												description="Name of the image | Change name of the Image as per your wish." />
+			
+			<field name="title2" type="text" size="70" default="We Build Responsive Flat Design." label="Title For Image2" description="Enter the title for Effect 2" filter="raw"/>
+			
+			<field name="desc2" type="textarea" rows="5" cols="30" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit praesent egestas justo sed sagittis interdum pellentesque sed ipsum eu risus sagittis varius. Suspendisse sed sapien dictum." label="Description" description="Enter the Description for Image 2" filter="raw"/>
+			
+			<field name="link2" type="text" size="70" default="#" label="Link" description="Enter the link" filter="raw" />	
+			<field name="link2_title" type="text" size="70" default="Learn More" label="Link Title" description="Enter the link Title" filter="raw" />	
+			
+			<field type="spacer" name="@spacer03" hr="true"/>
+			
+			<!--SlideShow 3-->
+			<field type="spacer" name="Image-3" label="Image3" />
+			
+			<field type="spacer" name="@spacer04" hr="true"/>
+			
+			<field name="image3" type="media" size="30" default="images/slider/ipad-angle.png" label="Image Name" 
+												description="Name of the image | Change name of the Image as per your wish." />
+			
+			<field name="title3" type="text" size="70" default="We Love Flat Design" label="Title For Image3" description="Enter the title for Effect 3" filter="raw"/>
+			
+			<field name="desc3" type="textarea" rows="5" cols="30" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit praesent egestas justo sed sagittis interdum pellentesque sed ipsum eu risus sagittis varius. Suspendisse sed sapien dictum." label="Description" 
+												description="Enter the Description for Image 3" filter="raw"/>
+										
+            <field name="link3" type="text" size="70" default="#" label="Link" description="Enter the link" filter="raw" />
+            <field name="link3_title" type="text" size="70" default="Learn More" label="Link Title" description="Enter the link Title" filter="raw" />										
+												
+			<field type="spacer" name="@spacer05" hr="true"/>
+			
+			
+			<!--SlideShow 4-->
+			
+			<field type="spacer" name="Image-4" label="Image4" />
+			
+			<field type="spacer" name="@spacer06" hr="true"/>
+			
+			<field name="image4" type="media" size="30" default="" label="Image Name" 
+														description="Name of the image | Change name of the Image as per your wish." />
+			
+			<field name="title4" type="text" size="70" default="" label="Title For Image4" description="" filter="raw" />
+			
+			<field name="desc4" type="textarea" rows="5" cols="30" default="" label="Description" 
+														description="" filter="raw"/>
+            
+			<field name="link4" type="text" size="70" default="" label="Link" description="Enter the link" filter="raw" />	 
+			<field name="link4_title" type="text" size="70" default="Learn More" label="Link Title" description="Enter the link Title" filter="raw" />														
+            														
+			
+			<!--SlideShow 5-->
+			
+			<field type="spacer" name="Image-5" label="Image5" />
+			
+			<field type="spacer" name="@spacer07" hr="true"/>
+			
+			<field name="image5" type="media" size="30" default="" label="Image Name" 
+														description="Name of the image | Change name of the Image as per your wish." />
+			<field name="title5" type="text" size="70" default="" label="Title For Image5" description="" filter="raw" />
+			
+			<field name="desc5" type="textarea" rows="5" cols="30" default="" label="Description" 
+														description="" filter="raw"/>
+            
+			<field name="link5" type="text" size="70" default="" label="Link" description="Enter the link" filter="raw" />
+			<field name="link5_title" type="text" size="70" default="Learn More" label="Link Title" description="Enter the link Title" filter="raw" />															
+			
+			<field type="spacer" name="@spacer08" hr="true"/>
+		</fieldset>
+		
+		
+		<fieldset name="Selectvideo" label="Enter video url">	
+			<field name="video" type="text" size="70" label="Select Video Url" description="Enter Video Url" filter="raw" />	
+
+			<field name="autoPlay" type="list" label="Auto_Play" default="true">
+					<option value="true">True</option>
+					<option value="false">False</option>
+			</field>
+			<field name="showcontrol" type="list" label="SHOW_CONTROL" default="true">
+					<option value="true">True</option>
+					<option value="false">False</option>
+			</field>
+			<field name="volume" type="list" label="VOLUME" default="true">
+					<option value="true">True</option>
+					<option value="false">False</option>
+			</field>
+
+		</fieldset>
+	
+		
+	</fields>
+</config>
+</extension>
