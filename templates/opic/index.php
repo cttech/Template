@@ -305,7 +305,7 @@ else
 		
 		<!-- <section  class="blog-rightsidebar" style=""> -->
 		<div id="blog-outer">	
-		<section id="blog" class="<?php echo $componentCls;?> blog-single"> 	<!-- this should be chnaged --> 
+		<section id="component-wrap" class="<?php echo $componentCls;?> blog-single"> 	<!-- this should be chnaged --> 
 			<div class="container">
 			<div class="row">
 		<?php if ($this->countModules('page-title')): ?>

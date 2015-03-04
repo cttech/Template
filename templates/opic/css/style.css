@@ -391,7 +391,7 @@ ul li span.menu-toggler {
 #services h3 {
 	color: #000;
 }
-#services h2, #project h2, #pricing h2, #blog h2, #team h2, #contact h2 {
+#services h2, #project h2, #pricing h2, #blog h2, #component-wrap h2, #team h2, #contact h2 {
 	font-size:34px;
 }
 #services .services-inner h4{
@@ -696,10 +696,14 @@ ul li span.menu-toggler {
 #blog {
 	padding: 80px 0 100px 0;
 }
+#component-wrap{
+	padding: 80px 0 100px 0;
+}
 #blog .home-title .lead, #blog .home-title .title-description{
 	color:#f0f0f0;
 	opacity:0.65 !important;
 }
+
 .blog-container {
 	background-color: #fff;
 	padding: 0;
@@ -1422,23 +1426,23 @@ ul.logo-client li > a > img:hover {
 .faq-inner{
 	margin-top:40px;
 }
-#faq .panel-default > .panel-heading, #shortcodes .accordion-after .panel-default > .panel-heading{
+#component-wrap .panel-default > .panel-heading, #shortcodes .accordion-after .panel-default > .panel-heading{
 	background-color:#FFFFFF;
 	color:#1abc9c;
 	position:relative;
 	padding:15px;
 }
-#faq .panel-group .panel, #shortcodes .accordion-after .panel-group .panel{
+#component-wrap .panel-group .panel, #shortcodes .accordion-after .panel-group .panel{
 	border-radius:0px;
 	margin-bottom:10px;
 }
-#faq .panel-heading .accordion-toggle .panel-heading, #shortcodes .accordion-after .panel-heading .accordion-toggle .panel-heading{
+#component-wrap .panel-heading .accordion-toggle .panel-heading, #shortcodes .accordion-after .panel-heading .accordion-toggle .panel-heading{
 	background-color: #1abc9c !important;
 }
-#faq .panel-heading .accordion-toggle.collapsed:after, #shortcodes .accordion-after .panel-heading .accordion-toggle.collapsed:after{
+#component-wrap .panel-heading .accordion-toggle.collapsed:after, #shortcodes .accordion-after .panel-heading .accordion-toggle.collapsed:after{
     content: "\f107";
 }
-#faq .panel-heading .accordion-toggle:after, #shortcodes .accordion-after .panel-heading .accordion-toggle:after{
+#component-wrap .panel-heading .accordion-toggle:after, #shortcodes .accordion-after .panel-heading .accordion-toggle:after{
   	content: "\f106";
     display: block;
     font-family: FontAwesome;
@@ -1452,7 +1456,7 @@ ul.logo-client li > a > img:hover {
     top: 0;
     width: 45px;
 }
-#faq .accordion-toggle:after, #shortcodes .accordion-after .accordion-toggle:after{
+#component-wrap .accordion-toggle:after, #shortcodes .accordion-after .accordion-toggle:after{
     background-color:#1abc9c;
 	color:#FFFFFF;
 }

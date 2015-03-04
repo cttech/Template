@@ -15,9 +15,9 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 //print_r($this->item);
 ?>
 <div class="blog-container animated catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php echo ($this->item->featured) ? ' catItemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>" data-animation="fadeInUp" data-animation-delay="300">
-		<?php if(isset($this->item->image) && !empty($this->item->image)): ?>
+		<?php //if(isset($this->item->image) && !empty($this->item->image)): ?>
 	<img src="<?php echo $this->item->image;?>" alt="photo blog" class="img-responsive pull-left blog-image">
-	<?php endif; ?>
+	<?php //endif; ?>
 	<?php if($this->item->params->get('catItemVideo') && !empty($this->item->video)): ?>
 	  <!-- Item video -->
 			<?php if($this->item->videoType=='embedded'): ?>
