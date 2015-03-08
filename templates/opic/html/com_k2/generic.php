@@ -12,33 +12,35 @@ defined('_JEXEC') or die;
 
 ?>
 
-<!-- Start K2 Tag Layout -->
-<div id="k2Container" class="tagView<?php if($this->params->get('pageclass_sfx')) echo ' '.$this->params->get('pageclass_sfx'); ?>">
+<!-- Start K2 Generic (search/date) Layout -->
+<div id="k2Container" class="genericView<?php if($this->params->get('pageclass_sfx')) echo ' '.$this->params->get('pageclass_sfx'); ?>">
 
 	<?php if(count($this->items)): ?>
-	<div class="tagItemList">
-		<?php foreach($this->items as $item): ?>
 
+	<div class="genericItemList">
+		<?php foreach($this->items as $item): ?>
+			
 		<!-- Start K2 Item Layout -->
-		<div class="blog-container animated tagItemView" data-animation="fadeInUp" data-animation-delay="300">
-		<?php if($item->params->get('tagItemImage',1) && !empty($item->imageGeneric)): ?>
+		<div class="blog-container animated genericItemView" data-animation="fadeInUp" data-animation-delay="300">
+			
+			<?php if($this->params->get('genericItemImage') && !empty($item->imageGeneric)): ?>
 			<img src="<?php echo $item->imageGeneric;;?>" alt="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>" class="img-responsive pull-left blog-image">
 			<?php endif; ?>
-			<?php if($item->params->get('tagItemVideo') && !empty($item->video)): ?>
+			<?php if($item->params->get('catItemVideo') && !empty($item->video)): ?>
 			  <!-- Item video -->
 					<?php if($item->videoType=='embedded'): ?>
 					
 					<?php echo $item->video; ?>
 					
 					<?php else: ?>
-					<span class="tagItemVideo"><?php echo $item->video; ?></span>
+					<span class="catItemVideo"><?php echo $item->video; ?></span>
 					<?php endif; ?>
 			
 		  <?php endif; ?>
-		 <?php if($item->params->get('tagItemTitle',1)): ?>
+		  <?php if($this->params->get('genericItemTitle')): ?>
 			  <!-- Item title -->
-			  <h5 class="tagItemTitle">
-			  	<?php if ($item->params->get('tagItemTitleLinked',1)): ?>
+			  <h5 class="genericItemTitle <?php echo (($this->params->get('genericItemImage') && !empty($item->imageGeneric)) || ($item->params->get('catItemVideo') && !empty($item->video))) ? '' : 'pdt8' ;?>">
+			  	<?php if ($this->params->get('genericItemTitleLinked')): ?>
 					<a href="<?php echo $item->link; ?>">
 			  		<?php echo $item->title; ?>
 			  	</a>
@@ -48,28 +50,29 @@ defined('_JEXEC') or die;
 			  </h5>
 			  <?php endif; ?>
 
-			 <?php if($item->params->get('tagItemIntroText',1)): ?>
+			 <?php if($this->params->get('genericItemIntroText')): ?>
 			  <!-- Item introtext -->
-			  <p class="tagItemIntroText">
+			  <p class="genericItemIntroText">
 			  		<?php echo $item->introtext; ?>
 			  </p>
 			  <?php endif; ?>
+
 		  <div class="clr"></div>
-		  
-		  <?php if($item->params->get('tagItemExtraFields',0) && count($item->extra_fields)): ?>
-		  <!-- Item extra fields -->  
-		  <div class="tagItemExtraFields">
+
+		  <?php if($this->params->get('genericItemExtraFields') && count($item->extra_fields)): ?>
+		  <!-- Item extra fields -->
+		  <div class="genericItemExtraFields">
 		  	<h4><?php echo JText::_('K2_ADDITIONAL_INFO'); ?></h4>
 		  	<ul>
 				<?php foreach ($item->extra_fields as $key=>$extraField): ?>
 				<?php if($extraField->value != ''): ?>
 				<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
 					<?php if($extraField->type == 'header'): ?>
-					<h4 class="tagItemExtraFieldsHeader"><?php echo $extraField->name; ?></h4>
+					<h4 class="genericItemExtraFieldsHeader"><?php echo $extraField->name; ?></h4>
 					<?php else: ?>
-					<span class="tagItemExtraFieldsLabel"><?php echo $extraField->name; ?></span>
-					<span class="tagItemExtraFieldsValue"><?php echo $extraField->value; ?></span>
-					<?php endif; ?>		
+					<span class="genericItemExtraFieldsLabel"><?php echo $extraField->name; ?></span>
+					<span class="genericItemExtraFieldsValue"><?php echo $extraField->value; ?></span>
+					<?php endif; ?>
 				</li>
 				<?php endif; ?>
 				<?php endforeach; ?>
@@ -77,18 +80,18 @@ defined('_JEXEC') or die;
 		    <div class="clr"></div>
 		  </div>
 		  <?php endif; ?>
-		  
-			<?php if($item->params->get('tagItemCategory')): ?>
+
+			<?php if($this->params->get('genericItemCategory')): ?>
 			<!-- Item category name -->
-			<div class="tagItemCategory">
+			<div class="genericItemCategory">
 				<span><?php echo JText::_('K2_PUBLISHED_IN'); ?></span>
 				<a href="<?php echo $item->category->link; ?>"><?php echo $item->category->name; ?></a>
 			</div>
 			<?php endif; ?>
-			
-			<?php if ($item->params->get('tagItemReadMore')): ?>
+
+			<?php if ($this->params->get('genericItemReadMore')): ?>
 			<!-- Item "read more..." link -->
-			<div class="tagItemReadMore">
+			<div class="genericItemReadMore">
 				<a class="k2ReadMore" href="<?php echo $item->link; ?>">
 					<?php echo JText::_('K2_READ_MORE'); ?>
 				</a>
@@ -98,7 +101,7 @@ defined('_JEXEC') or die;
 			<div class="clr"></div>
 		</div>
 		<!-- End K2 Item Layout -->
-		
+
 		<?php endforeach; ?>
 	</div>
 
@@ -111,7 +114,16 @@ defined('_JEXEC') or die;
 	</div>
 	<?php endif; ?>
 
+	<?php else: ?>
+
+	<?php if(!$this->params->get('googleSearch')): ?>
+	<!-- No results found -->
+	<div id="genericItemListNothingFound">
+		<p><?php echo JText::_('K2_NO_RESULTS_FOUND'); ?></p>
+	</div>
 	<?php endif; ?>
-	
+
+	<?php endif; ?>
+
 </div>
-<!-- End K2 Tag Layout -->
+<!-- End K2 Generic (search/date) Layout -->

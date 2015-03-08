@@ -1852,3 +1852,8 @@ div.itemRatingForm .formLogLoading {background:url(../images/loading.gif) no-rep
 .itemRatingList a.five-stars {width:100%;z-index:2;}
 .itemRatingList .itemCurrentRating {z-index:1;background-position:0 center;margin:0;padding:0;}
 span.siteRoot {display:none;}
+/* tag listing && generic listing*/
+.blog-container div.tagItemCategory, .blog-container div.genericItemCategory{ margin-left: 20px;}
+div.genericItemView, div.tagItemView{ padding: 0px 0px 8px 0px;}
+.pdt8{padding: 8px;}
+.genericItemList .blog-container{ min-height: 0 !important;}
