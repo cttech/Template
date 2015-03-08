@@ -37,19 +37,24 @@ defined('_JEXEC') or die;
 		<?php foreach($this->items as $item): ?>
 
 		<!-- Start K2 Item Layout -->
-		<div class="tagItemView">
-
-			<div class="tagItemHeader">
-				<?php if($item->params->get('tagItemDateCreated',1)): ?>
-				<!-- Date created -->
-				<span class="tagItemDateCreated">
-					<?php echo JHTML::_('date', $item->created , JText::_('K2_DATE_FORMAT_LC2')); ?>
-				</span>
-				<?php endif; ?>
+		<div class="blog-container animated tagItemView" data-animation="fadeInUp" data-animation-delay="300">
+		<?php if($item->params->get('tagItemImage',1) && !empty($item->imageGeneric)): ?>
+			<img src="<?php echo $item->imageGeneric;;?>" alt="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>" class="img-responsive pull-left blog-image">
+			<?php endif; ?>
+			<?php if($item->params->get('catItemVideo') && !empty($item->video)): ?>
+			  <!-- Item video -->
+					<?php if($item->videoType=='embedded'): ?>
+					
+					<?php echo $item->video; ?>
+					
+					<?php else: ?>
+					<span class="catItemVideo"><?php echo $item->video; ?></span>
+					<?php endif; ?>
 			
-			  <?php if($item->params->get('tagItemTitle',1)): ?>
+		  <?php endif; ?>
+		 <?php if($item->params->get('tagItemTitle',1)): ?>
 			  <!-- Item title -->
-			  <h2 class="tagItemTitle">
+			  <h5 class="tagItemTitle">
 			  	<?php if ($item->params->get('tagItemTitleLinked',1)): ?>
 					<a href="<?php echo $item->link; ?>">
 			  		<?php echo $item->title; ?>
@@ -57,33 +62,15 @@ defined('_JEXEC') or die;
 			  	<?php else: ?>
 			  	<?php echo $item->title; ?>
 			  	<?php endif; ?>
-			  </h2>
+			  </h5>
 			  <?php endif; ?>
-		  </div>
 
-		  <div class="tagItemBody">
-			  <?php if($item->params->get('tagItemImage',1) && !empty($item->imageGeneric)): ?>
-			  <!-- Item Image -->
-			  <div class="tagItemImageBlock">
-				  <span class="tagItemImage">
-				    <a href="<?php echo $item->link; ?>" title="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>">
-				    	<img src="<?php echo $item->imageGeneric; ?>" alt="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>" style="width:<?php echo $item->params->get('itemImageGeneric'); ?>px; height:auto;" />
-				    </a>
-				  </span>
-				  <div class="clr"></div>
-			  </div>
-			  <?php endif; ?>
-			  
-			  <?php if($item->params->get('tagItemIntroText',1)): ?>
+			 <?php if($item->params->get('tagItemIntroText',1)): ?>
 			  <!-- Item introtext -->
-			  <div class="tagItemIntroText">
-			  	<?php echo $item->introtext; ?>
-			  </div>
+			  <p class="tagItemIntroText">
+			  		<?php echo $item->introtext; ?>
+			  </p>
 			  <?php endif; ?>
-
-			  <div class="clr"></div>
-		  </div>
-		  
 		  <div class="clr"></div>
 		  
 		  <?php if($item->params->get('tagItemExtraFields',0) && count($item->extra_fields)): ?>
